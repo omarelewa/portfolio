@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omar Elewa, Copywriter &amp; Brand Strategist</title>
+<meta name="description" content="Omar Elewa, copywriter and brand strategist in Cairo. I name things and write the words brands actually need, in Arabic and English. Some of the work is below.">
+<meta name="author" content="Omar Elewa">
+<meta name="theme-color" content="#FAF6EE">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Omar Elewa, Copywriter & Brand Strategist">
+<meta property="og:description" content="I name things and write the words brands actually need, in Arabic and English. Work from Cairo.">
+<meta property="og:locale" content="en">
+
+<!-- Favicon: OE monogram -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231A1712'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='52' fill='%23FAF6EE' text-anchor='middle' font-style='italic'%3Eoe%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#FAF6EE;
+    --paper-2:#F2ECDF;
+    --paper-3:#EAE2D1;
+    --card:#FFFDF8;
+    --ink:#1A1712;
+    --ink-soft:#5C5448;
+    --ink-mid:#8A8273;
+    --ink-faint:#B3AB99;
+    --line:#E5DDCC;
+    --line-soft:#EEE7D8;
+    --gold:#D8B45A;
+    --gold-soft:#E2C36C;
+
+    /* featured (Akleh): warm, dark, shawarma-fire */
+    --feat-bg:#1B130C;
+    --amber:#F0A93C;
+    --amber-2:#F7C457;
+    --chili:#D8412B;
+    --cream:#F4ECD7;
+    --cream-soft:#E0D3BB;
+    --feat-muted:#B6A689;
+
+    --serif:"Fraunces", Georgia, "Times New Roman", serif;
+    --sans:"Hanken Grotesk", system-ui, sans-serif;
+    --mono:"IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+    --ar:"Aref Ruqaa", "Times New Roman", serif;
+
+    --maxw:1240px;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+
+  body{
+    font-family:var(--sans);
+    background:var(--paper);
+    color:var(--ink);
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+    position:relative;
+  }
+
+  body::before{
+    content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity:.035; mix-blend-mode:multiply;
+  }
+  body::after{
+    content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
+    background:radial-gradient(120% 80% at 50% -10%, rgba(216,180,90,.07), transparent 60%);
+  }
+
+  ::selection{ background:var(--ink); color:var(--paper); }
+
+  a{ color:inherit; text-decoration:none; }
+  img{ max-width:100%; display:block; }
+
+  .wrap{ width:100%; max-width:var(--maxw); margin:0 auto; padding:0 clamp(22px,5vw,64px); position:relative; z-index:1; }
+
+  .mono{ font-family:var(--mono); font-size:11.5px; letter-spacing:.22em; text-transform:uppercase; color:var(--ink-mid); }
+  .ar{ font-family:var(--ar); direction:rtl; unicode-bidi:isolate; }
+
+  /* ============ NAV ============ */
+  nav{
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px clamp(22px,5vw,64px);
+    transition:background .4s ease, border-color .4s ease, padding .4s ease;
+    border-bottom:1px solid transparent;
+  }
+  nav.scrolled{
+    background:rgba(250,246,238,.82);
+    backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+    padding-top:14px; padding-bottom:14px;
+  }
+  nav .wordmark{
+    font-family:var(--serif); font-weight:500; font-size:21px; letter-spacing:-.01em; color:var(--ink);
+    display:flex; align-items:baseline; gap:9px;
+  }
+  nav .wordmark .dot{ width:6px; height:6px; border-radius:50%; background:var(--gold); display:inline-block; transform:translateY(-2px); }
+  nav .navmeta{ display:flex; gap:26px; align-items:center; }
+  nav .navmeta a{ font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-soft); transition:color .25s; position:relative; }
+  nav .navmeta a:hover{ color:var(--ink); }
+  nav .navmeta a::after{ content:""; position:absolute; left:0; right:100%; bottom:-5px; height:1px; background:var(--ink); transition:right .3s ease; }
+  nav .navmeta a:hover::after{ right:0; }
+  @media (max-width:620px){ nav .navmeta a.hideable{ display:none; } }
+
+  /* ============ HERO ============ */
+  header.hero{
+    min-height:100vh; min-height:100svh; display:flex; flex-direction:column; justify-content:center;
+    padding-top:120px; padding-bottom:60px; position:relative;
+  }
+  .hero .eyebrow{ margin-bottom:30px; opacity:0; }
+  .hero h1{
+    font-family:var(--serif); font-weight:340; font-size:clamp(58px,13vw,176px);
+    line-height:.92; letter-spacing:-.025em; color:var(--ink); margin:0;
+    opacity:0;
+  }
+  .hero h1 .last{ font-style:italic; font-weight:340; }
+  .hero .role{ margin-top:24px; opacity:0; }
+  .hero .role .sep{ color:var(--gold); margin:0 8px; }
+  .hero .thesis{
+    font-family:var(--serif); font-weight:330; font-style:italic;
+    font-size:clamp(22px,3.5vw,38px); line-height:1.28; color:var(--ink);
+    max-width:22ch; margin:46px 0 0; opacity:0;
+  }
+  .hero .thesis em{ font-style:normal; color:var(--ink); background:linear-gradient(transparent 66%, rgba(216,180,90,.45) 66%); padding:0 1px; }
+  .hero .disciplines{
+    margin-top:40px; font-family:var(--mono); font-size:12px; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--ink-mid); opacity:0;
+  }
+  .hero .disciplines b{ color:var(--ink-soft); font-weight:500; }
+  .hero .scrollcue{
+    position:absolute; bottom:34px; left:clamp(22px,5vw,64px);
+    font-family:var(--mono); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-mid);
+    display:flex; align-items:center; gap:10px; opacity:0;
+  }
+  .hero .scrollcue .arr{ display:inline-block; animation:bob 2.4s ease-in-out infinite; }
+  @keyframes bob{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(4px); } }
+
+  /* ============ SECTION SCAFFOLD ============ */
+  section{ padding:clamp(70px,10vw,130px) 0; position:relative; }
+  .seclabel{ display:flex; align-items:center; gap:16px; margin-bottom:46px; }
+  .seclabel .ln{ flex:1; height:1px; background:var(--line); }
+  .topline{ border-top:1px solid var(--line); }
+
+  /* ============ APPROACH ============ */
+  .approach .lead{
+    font-family:var(--serif); font-weight:360; font-size:clamp(24px,3.4vw,40px); line-height:1.32;
+    letter-spacing:-.01em; color:var(--ink); max-width:23ch;
+  }
+  .approach .lead .hl{ font-style:italic; color:var(--ink); }
+  .approach .sub{ margin-top:26px; font-size:clamp(16px,1.6vw,18.5px); color:var(--ink-soft); max-width:58ch; }
+  .approach .sub em{ font-family:var(--serif); font-style:italic; }
+
+  .triad{ display:grid; grid-template-columns:repeat(3,1fr); gap:34px; margin-top:68px; }
+  .triad .t{ border-top:2px solid var(--ink); padding-top:18px; }
+  .triad .t .n{ font-family:var(--mono); font-size:11px; letter-spacing:.2em; color:var(--gold); font-weight:600; }
+  .triad .t h3{ font-family:var(--serif); font-weight:420; font-size:25px; line-height:1.1; margin:10px 0 10px; letter-spacing:-.01em; }
+  .triad .t p{ font-size:15.5px; color:var(--ink-soft); line-height:1.55; max-width:34ch; }
+  @media (max-width:760px){ .triad{ grid-template-columns:1fr; gap:30px; } }
+
+  /* ============ WORK ============ */
+  .work .head{ display:flex; justify-content:space-between; align-items:flex-end; gap:20px; flex-wrap:wrap; margin-bottom:14px; }
+  .work .head h2{ font-family:var(--serif); font-weight:380; font-size:clamp(38px,6vw,72px); letter-spacing:-.025em; line-height:.95; }
+  .work .head .count{ font-family:var(--mono); font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-mid); padding-bottom:10px; }
+
+  /* featured */
+  .featured{
+    display:grid; grid-template-columns:1.05fr 1fr; gap:0; margin:40px 0 18px;
+    background:var(--feat-bg); border-radius:18px; overflow:hidden; position:relative;
+    box-shadow:0 30px 70px -30px rgba(20,12,6,.6);
+    border:1px solid rgba(240,169,60,.16);
+    transition:transform .5s cubic-bezier(.2,.7,.2,1), box-shadow .5s;
+  }
+  .featured:hover{ transform:translateY(-6px); box-shadow:0 44px 90px -34px rgba(20,12,6,.66); }
+  .featured::before{
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background:radial-gradient(95% 120% at 88% 8%, rgba(240,169,60,.16), transparent 55%);
+  }
+  .featured .fl{ padding:clamp(32px,4vw,56px); position:relative; z-index:1; display:flex; flex-direction:column; }
+  .featured .ftag{ font-family:var(--mono); font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--amber); }
+  .featured .fname{
+    font-family:var(--serif); font-weight:380; font-size:clamp(58px,9vw,118px); line-height:.92; letter-spacing:-.02em;
+    color:var(--cream); margin:auto 0 6px; padding-top:44px;
+  }
+  .featured .ftype{ font-family:var(--mono); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--feat-muted); margin-bottom:22px; }
+  .featured .fhook{ font-family:var(--serif); font-style:italic; font-weight:340; font-size:clamp(18px,2vw,23px); line-height:1.42; color:var(--cream-soft); max-width:38ch; }
+  .featured .fhook .ar{ font-style:normal; color:var(--amber-2); }
+  .featured .fcta{ margin-top:30px; font-family:var(--mono); font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--amber-2); display:inline-flex; align-items:center; gap:10px; }
+  .featured .fcta .ar2{ transition:transform .35s ease; display:inline-block; }
+  .featured:hover .fcta .ar2{ transform:translateX(7px); }
+  .featured .fr{
+    position:relative; z-index:1; min-height:300px;
+    background:
+      radial-gradient(80% 90% at 32% 34%, rgba(216,65,43,.20), transparent 60%),
+      linear-gradient(180deg, rgba(27,19,12,0), rgba(27,19,12,.5)),
+      repeating-linear-gradient(135deg, rgba(240,169,60,.06) 0 2px, transparent 2px 22px);
+    display:flex; align-items:center; justify-content:center;
+    border-left:1px solid rgba(240,169,60,.16);
+  }
+  .featured .crest{ text-align:center; padding:24px; }
+  .featured .crest .big{ font-family:var(--ar); font-size:clamp(40px,6.4vw,76px); color:var(--amber); line-height:1.18; max-width:9ch; margin:0 auto; }
+  .featured .crest .rom{ font-family:var(--mono); font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:var(--feat-muted); margin-top:18px; }
+  @media (max-width:820px){
+    .featured{ grid-template-columns:1fr; }
+    .featured .fr{ min-height:180px; border-left:0; border-top:1px solid rgba(240,169,60,.16); order:-1; }
+    .featured .crest .big{ font-size:clamp(34px,9vw,60px); }
+    .featured .fname{ padding-top:18px; }
+  }
+
+  /* filter */
+  .filterbar{ display:flex; flex-wrap:wrap; gap:8px; margin:30px 0 26px; align-items:center; }
+  .filterbar .flabel{ font-family:var(--mono); font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-faint); margin-right:10px; }
+  .filterbar button{
+    font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase;
+    background:transparent; border:1px solid var(--line); color:var(--ink-soft);
+    padding:8px 15px; border-radius:999px; cursor:pointer; transition:all .25s ease;
+  }
+  .filterbar button:hover{ border-color:var(--ink-mid); color:var(--ink); }
+  .filterbar button.active{ background:var(--ink); border-color:var(--ink); color:var(--paper); }
+
+  /* grid */
+  .grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  @media (max-width:900px){ .grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:560px){ .grid{ grid-template-columns:1fr; } }
+
+  .card{
+    --acc:#1A1712;
+    background:var(--card); border:1px solid var(--line); border-radius:14px;
+    padding:26px 26px 24px; position:relative; overflow:hidden;
+    display:flex; flex-direction:column; min-height:262px;
+    transition:transform .42s cubic-bezier(.2,.7,.2,1), box-shadow .42s, border-color .42s;
+  }
+  .card::before{
+    content:""; position:absolute; top:0; left:0; right:0; height:3px;
+    background:var(--acc); transform:scaleX(0); transform-origin:left; transition:transform .45s cubic-bezier(.2,.7,.2,1);
+  }
+  .card:hover{ transform:translateY(-6px); box-shadow:0 26px 50px -26px rgba(40,30,15,.28); border-color:color-mix(in srgb, var(--acc) 40%, var(--line)); }
+  .card:hover::before{ transform:scaleX(1); }
+  .card .idx{ font-family:var(--mono); font-size:11px; letter-spacing:.14em; color:var(--ink-faint); }
+  .card .ctag{ font-family:var(--mono); font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--acc); font-weight:600; margin-top:3px; }
+  .card .ceyebrow{ font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-mid); margin-top:20px; }
+  .card .ceyebrow .ar{ font-size:13px; letter-spacing:0; }
+  .card h3{ font-family:var(--serif); font-weight:420; font-size:27px; line-height:1.02; letter-spacing:-.015em; color:var(--ink); margin:7px 0 0; }
+  .card h3 .ar{ font-size:.7em; color:var(--ink-soft); margin-left:.3em; }
+  .card .livetag{
+    display:inline-block; margin-top:11px; font-family:var(--mono); font-size:9.5px; letter-spacing:.18em; text-transform:uppercase;
+    color:#2C7A4F; border:1px solid #C2E0CD; background:#EEF7F1; padding:3px 9px; border-radius:999px;
+  }
+  .card .chook{ font-size:14.5px; line-height:1.5; color:var(--ink-soft); margin-top:13px; max-width:42ch; }
+  .card .chook .ar{ font-size:16px; }
+  .card .cgo{
+    margin-top:auto; padding-top:18px; font-family:var(--mono); font-size:10.5px; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--ink-mid); display:inline-flex; align-items:center; gap:9px; transition:color .3s;
+  }
+  .card:hover .cgo{ color:var(--acc); }
+  .card .cgo .a{ display:inline-block; transition:transform .35s ease; }
+  .card:hover .cgo .a{ transform:translateX(6px); }
+  .card.hidden{ display:none; }
+
+  /* ============ FOOTER ============ */
+  footer{
+    border-top:1px solid var(--line); padding:clamp(64px,9vw,110px) 0 56px; position:relative;
+  }
+  footer .signoff{
+    font-family:var(--serif); font-weight:340; font-style:italic; font-size:clamp(24px,3.6vw,42px);
+    line-height:1.22; letter-spacing:-.01em; color:var(--ink); max-width:24ch;
+  }
+  footer .colo{
+    margin-top:60px; display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap;
+  }
+  footer .colo .who{ font-family:var(--serif); font-size:20px; font-weight:500; display:flex; align-items:baseline; flex-wrap:wrap; }
+  footer .colo .who .dot{ width:5px; height:5px; border-radius:50%; background:var(--gold); display:inline-block; margin:0 2px 2px 4px; }
+  footer .colo .who .t{ font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-mid); margin-left:10px; }
+  footer .colo .meta{ font-family:var(--mono); font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); text-align:right; line-height:1.9; }
+
+  /* ============ REVEAL ============ */
+  .rv{ opacity:0; transform:translateY(22px); transition:opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
+  .rv.in{ opacity:1; transform:none; }
+  .rv.d1{ transition-delay:.06s; } .rv.d2{ transition-delay:.14s; } .rv.d3{ transition-delay:.22s; }
+  .rv.d4{ transition-delay:.3s; } .rv.d5{ transition-delay:.38s; }
+
+  @keyframes fadeUp{ from{ opacity:0; transform:translateY(26px); } to{ opacity:1; transform:none; } }
+  .load{ animation:fadeUp .9s cubic-bezier(.2,.7,.2,1) forwards; }
+  .l1{ animation-delay:.05s; } .l2{ animation-delay:.18s; } .l3{ animation-delay:.34s; }
+  .l4{ animation-delay:.5s; } .l5{ animation-delay:.66s; } .l6{ animation-delay:.9s; }
+
+  @media (prefers-reduced-motion:reduce){
+    *{ animation:none !important; transition:none !important; }
+    .rv{ opacity:1; transform:none; }
+    .hero .eyebrow,.hero h1,.hero .role,.hero .thesis,.hero .disciplines,.hero .scrollcue{ opacity:1; }
+    html{ scroll-behavior:auto; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="#top" class="wordmark">Omar Elewa<span class="dot"></span></a>
+  <div class="navmeta">
+    <a href="#approach" class="hideable">Approach</a>
+    <a href="#work">Work</a>
+  </div>
+</nav>
+
+<a id="top"></a>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow mono load l1">Cairo · Arabic &amp; English</div>
+    <h1 class="load l2">Omar <span class="last">Elewa</span></h1>
+    <div class="role mono load l3">Copywriter <span class="sep">&amp;</span> Brand Strategist</div>
+    <p class="thesis load l4">Most brands say too much. My job is <em>mostly subtraction</em>. Find the one thing worth saying, then lose the rest.</p>
+    <div class="disciplines load l5"><b>Naming</b> · <b>Verbal identity</b> · <b>Brand strategy</b> · <b>Advertising</b></div>
+  </div>
+  <div class="scrollcue mono load l6"><span class="arr">↓</span> See the work</div>
+</header>
+
+<!-- ===================== APPROACH ===================== -->
+<section id="approach" class="approach topline">
+  <div class="wrap">
+    <div class="seclabel"><span class="mono">How I work</span><span class="ln"></span></div>
+    <p class="lead rv">I figure out what a brand is actually about, then I write it down. Most people treat those as two jobs. <span class="hl">They're not</span>, or at least they've never felt that way to me. A good idea is useless if it reads flat on the page.</p>
+    <p class="sub rv d1">A couple of these actually got made. The rest are concepts, shown more or less the way I'd pitch them in a room. Every one of them started as a single idea I couldn't stop turning over.</p>
+
+    <div class="triad">
+      <div class="t rv d1">
+        <div class="n">01</div>
+        <h3>Find the idea</h3>
+        <p>Every brand is really about one thing. I keep digging till I hit it. Usually it's simpler than anyone expected, which throws them a bit.</p>
+      </div>
+      <div class="t rv d2">
+        <div class="n">02</div>
+        <h3>Write it down</h3>
+        <p>A name, a line, the whole way a brand talks. I get it to sound like itself and not like everyone else, in Arabic, English, or both at once.</p>
+      </div>
+      <div class="t rv d3">
+        <div class="n">03</div>
+        <h3>Put it to work</h3>
+        <p>Then it has to leave the slide deck. The ideas I like are the ones that hold up out in the world, not just the ones that look tidy in a PDF.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WORK ===================== -->
+<section id="work" class="work topline">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="rv">Selected Work</h2>
+      <span class="count rv d1">Ten projects. Naming, strategy, a few campaigns.</span>
+    </div>
+
+    <!-- FEATURED: AKLEH -->
+    <a class="featured rv d1" href="work/akleh-shawarma.html" aria-label="Akleh Shawarma, advertising campaign">
+      <div class="fl">
+        <div class="ftag">Featured · Akleh Shawarma</div>
+        <div class="fname">Akleh</div>
+        <div class="ftype">Advertising · concept campaign, platform &amp; film</div>
+        <p class="fhook">Every shawarma ad sells the meat. This one sells what shawarma does to you. The craving that tracks you down across town. The one bite you won't share with anyone. And the whole thing rides one question, building until it lands on the national anthem: <span class="ar">شاورمتك ايه؟</span></p>
+        <span class="fcta">See the campaign <span class="ar2">→</span></span>
+      </div>
+      <div class="fr">
+        <div class="crest">
+          <div class="big ar">شاورمتك ايه؟</div>
+          <div class="rom">"what's your shawarma?"</div>
+        </div>
+      </div>
+    </a>
+
+    <!-- FILTER -->
+    <div class="filterbar rv">
+      <span class="flabel">Filter</span>
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="naming">Naming &amp; Verbal Identity</button>
+      <button data-filter="strategy">Brand Strategy</button>
+      <button data-filter="advertising">Advertising</button>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid" id="grid">
+
+      <a class="card rv" style="--acc:#A6822E" data-cat="naming strategy" href="work/tajed.html">
+        <div class="idx">02</div>
+        <div class="ctag">Naming · Brand Strategy</div>
+        <div class="ceyebrow">Taj City · Cairo</div>
+        <h3>Tajed <span class="ar">تجد</span></h3>
+        <span class="livetag">Picked · built · live</span>
+        <p class="chook">One word doing two jobs. In Arabic, تجد means "you find." In English it hides the parent brand in plain sight: Taj-ed. Taj City liked it enough to build it, so it's on the signs there now.</p>
+        <span class="cgo">View <span class="a">→</span></span>
+      </a>
+
+      <a class="card rv d1" style="--acc:#6E3BD6" data-cat="advertising" href="work/ava-rumor.html">
+        <div class="idx">03</div>
+        <div class="ctag">Launch Campaign</div>
+        <div class="ceyebrow">Ava · 'I Heard a Rumor'</div>
+        <h3>Ava</h3>
+        <p class="chook">How do you launch a club with basically no media budget? You start a rumour. A made-up singing creature, whispered around the city, until people are selling the place to each other before it's even open.</p>
+        <span class="cgo">View <span class="a">→</span></span>
+      </a>
+
+      <a class="card rv d2" style="--acc:#A8631C" data-cat="strategy" href="work/zahran.html">
+        <div class="idx">04</div>
+        <div class="ctag">Brand Strategy</div>
+        <div class="ceyebrow">Zahran Cookware · <span class="ar">عيش وملح</span></div>
+        <h3>Zahran</h3>
+        <p class="chook">Zahran's pans are never going to beat a French non-stick on the spec sheet. So the strategy stops fighting that fight and picks one it can actually win: belonging. <span class="ar">عيش وملح</span>, and giving nervous first-time cooks permission to get dinner wrong.</p>
+        <span class="cgo">View <span class="a">→</span></span>
+      </a>
+
+      <a class="card rv" style="--acc:#566249" data-cat="naming" href="work/motion.html">
+        <div class="idx">05</div>
+        <div class="ctag">Naming Rationale</div>
+        <div class="ceyebrow">Motion Pilates · <span class="ar">موشن</span></div>
+        <h3>Motion</h3>
+        <p class="chook">Every other studio sells exercise. Motion sells momentum, that small addictive feeling of actually getting somewhere. The gap between a place you visit and a way you live is the whole pitch.</p>
+        <span class="cgo">View <span class="a">→</span></span>
+      </a>
+
+      <a class="card rv d1" style="--acc:#15909E" data-cat="naming" href="work/sweep.html">
+        <div class="idx">06</div>
+        <div class="ctag">Naming Rationale</div>
+        <div class="ceyebrow">Sweep Swimming Academy · <span class="ar">سويب</span></div>
+        <h3>Sweep</h3>
+        <p class="chook">Every swim school names itself after the water. Aqua-this, Dolphin-that, Splash, Marlin. Sweep skips all that and names itself after winning instead. And "sweep" also happens to be the exact arc your arm makes through the water, which honestly felt like a small gift.</p>
+        <span class="cgo">View <span class="a">→</span></span>
+      </a>
+
+      <a class="card rv d2" style="--acc:#A23C50" data-cat="naming strategy" href="work/beauty-brand.html">
+        <div class="idx">07</div>
+        <div class="ctag">Naming · Strategy</div>
+        <div class="ceyebrow">A Beauty Brand</div>
+        <h3>Eight Names, Two Worlds</h3>
+        <p class="chook">Eight names that looked like a single shortlist. Look closer and it's actually two different brands hiding in one folder. Once you decide which of those you're building, the name more or less picks itself.</p>
+        <span class="cgo">View <span class="a">→</span></span>
+      </a>
+
+      <a class="card rv" style="--acc:#B23A2A" data-cat="naming" href="work/italian-deli.html">
+        <div class="idx">08</div>
+        <div class="ctag">Naming · Strategy</div>
+        <div class="ceyebrow">An Italian Deli</div>
+        <h3>An Italian Deli</h3>
+        <p class="chook">Nine names, three personalities, and frankly too many bread puns. "Born and bred" turns into Born &amp; Bread. The Holy Grail turns into Holy Grain. It's the everyday sandwich with the volume turned all the way up.</p>
+        <span class="cgo">View <span class="a">→</span></span>
+      </a>
+
+      <a class="card rv d1" style="--acc:#B2562C" data-cat="naming" href="work/lebanese-restaurant.html">
+        <div class="idx">09</div>
+        <div class="ctag">Naming Presentation</div>
+        <div class="ceyebrow">A Lebanese Restaurant · <span class="ar">لبنان</span></div>
+        <h3>A Lebanese Restaurant</h3>
+        <p class="chook">The lazy version is to name it something vaguely "Lebanese." The better one is to take one very specific thing, a real mountain, a clay oven, a line of old folk verse, and turn that into something you can taste.</p>
+        <span class="cgo">View <span class="a">→</span></span>
+      </a>
+
+      <a class="card rv d2" style="--acc:#21657A" data-cat="naming" href="work/alexandria.html">
+        <div class="idx">10</div>
+        <div class="ctag">Naming Presentation</div>
+        <div class="ceyebrow">A Destination in Alexandria · <span class="ar">الإسكندرية</span></div>
+        <h3>A Destination in Alexandria</h3>
+        <p class="chook">Why borrow personality from anywhere else when the city is sitting right there? Eleven names, each one wearing a piece of Alexandria. Its founding year, 330 BCE. The lost lighthouse. Its spot on the map at 31°N. The sea.</p>
+        <span class="cgo">View <span class="a">→</span></span>
+      </a>
+
+    </div>
+    <p class="mono rv" id="emptymsg" style="display:none; margin-top:30px; color:var(--ink-faint);">Nothing in that category.</p>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="topline">
+  <div class="wrap">
+    <p class="signoff rv">Most of this job is cutting words until the right ones are left. Some days that takes five minutes. Some days it takes a week.</p>
+    <div class="colo">
+      <div class="who rv d1">Omar Elewa<span class="dot"></span><span class="t">Copywriter &amp; Brand Strategist</span></div>
+      <div class="meta rv d1">
+        Cairo, Egypt. Arabic &amp; English<br>
+        © <span id="year">2026</span> Omar Elewa<br>
+        Set in Fraunces, Hanken Grotesk &amp; IBM Plex Mono
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!--
+  ============================================================
+  OPTIONAL CONTACT BLOCK. Currently disabled by request.
+  To enable a "Get in touch" section later, move this block
+  out of the comment, add your details, and add a "Contact"
+  link to the nav .navmeta. No rebuild needed.
+
+  <section id="contact" class="topline">
+    <div class="wrap">
+      <div class="seclabel"><span class="mono">Contact</span><span class="ln"></span></div>
+      <p class="approach lead">Let's talk.</p>
+      <p style="margin-top:20px;font-family:var(--mono);letter-spacing:.06em;">
+        <a href="mailto:YOUR-EMAIL">YOUR-EMAIL</a> ·
+        <a href="https://www.linkedin.com/in/YOUR-HANDLE">LinkedIn</a> ·
+        <a href="https://instagram.com/YOUR-HANDLE">Instagram</a>
+      </p>
+    </div>
+  </section>
+  ============================================================
+-->
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  var nav = document.getElementById('nav');
+  var onScroll = function(){ nav.classList.toggle('scrolled', window.scrollY > 40); };
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold:0.12, rootMargin:'0px 0px -8% 0px' });
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+
+  var buttons = document.querySelectorAll('.filterbar button');
+  var cards = document.querySelectorAll('#grid .card');
+  var empty = document.getElementById('emptymsg');
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      buttons.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      var f = btn.getAttribute('data-filter');
+      var shown = 0;
+      cards.forEach(function(card){
+        var cats = (card.getAttribute('data-cat') || '').split(' ');
+        var match = (f === 'all') || cats.indexOf(f) !== -1;
+        card.classList.toggle('hidden', !match);
+        if(match){ shown++; card.classList.add('in'); }
+      });
+      empty.style.display = shown === 0 ? 'block' : 'none';
+    });
+  });
+</script>
+
+</body>
+</html>

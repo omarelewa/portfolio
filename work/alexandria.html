@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Destination in Alexandria · Naming Presentation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&family=Reem+Kufi:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F1E8D8;
+    --paper-2:#F8F0E1;
+    --card:#FAF4E7;
+    --ink:#15323D;
+    --ink-soft:#52666C;
+    --ink-faint:#9AA39F;
+    --sea:#2E6E82;
+    --sea-deep:#1B4E5E;
+    --gold:#C58F31;
+    --gold-deep:#A0721F;
+    --line:rgba(21,50,61,0.13);
+    --line-soft:rgba(21,50,61,0.07);
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Jost", system-ui, sans-serif;
+    font-size:17px; line-height:1.65; font-weight:400;
+    background-image:
+      radial-gradient(1100px 540px at 88% -10%, rgba(197,143,49,0.16), transparent 60%),
+      radial-gradient(900px 520px at 6% 2%, rgba(46,110,130,0.12), transparent 60%);
+    background-attachment:fixed;
+  }
+  body::before{
+    content:""; position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.55;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  }
+  .wrap{ position:relative; z-index:1; max-width:840px; margin:0 auto; padding:80px 46px 104px; }
+
+  .eyebrow{
+    font-family:"Jost", sans-serif; font-size:11.5px; font-weight:600;
+    letter-spacing:.3em; text-transform:uppercase; color:var(--gold-deep);
+    display:inline-flex; align-items:center; gap:12px;
+  }
+  .eyebrow .bar{ width:28px; height:1px; background:var(--gold); display:inline-block; }
+  .ar{ font-family:"Reem Kufi", sans-serif; direction:rtl; }
+
+  /* hero */
+  header{ padding-bottom:18px; }
+  .brandline{
+    font-family:"Jost", sans-serif; font-weight:500; font-size:11.5px;
+    letter-spacing:.28em; text-transform:uppercase; color:var(--ink-soft);
+    display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;
+    padding-bottom:34px; border-bottom:1px solid var(--line);
+  }
+  .brandline .right{ color:var(--ink-faint); }
+  .title{
+    font-family:"Playfair Display", serif; font-weight:600;
+    font-size:clamp(50px,9.5vw,98px); line-height:.98; letter-spacing:-0.01em;
+    margin:52px 0 14px; color:var(--ink);
+  }
+  .title .small{ display:block; font-size:.52em; font-weight:500; font-style:italic; color:var(--sea-deep); margin-top:.18em; letter-spacing:0; }
+  .sub{
+    font-family:"Jost", sans-serif; font-weight:500; font-size:13px;
+    letter-spacing:.22em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 30px;
+    display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+  }
+  .sub .ar{ font-family:"Reem Kufi", sans-serif; text-transform:none; letter-spacing:0; font-size:17px; color:var(--ink); }
+  .sub .pip{ width:5px; height:5px; border-radius:50%; background:var(--gold); }
+  .thesis{
+    font-family:"Playfair Display", serif; font-style:italic; font-weight:500;
+    font-size:clamp(24px,4vw,36px); line-height:1.22; color:var(--ink); max-width:22ch; margin:0;
+  }
+  .thesis .hl{ color:var(--gold-deep); font-style:normal; }
+
+  /* brief */
+  section{ padding:48px 0; border-bottom:1px solid var(--line-soft); }
+  h2{ font-family:"Playfair Display", serif; font-weight:600; font-size:33px; line-height:1.12; margin:14px 0 16px; }
+  p{ margin:0 0 1.05em; } p:last-child{ margin-bottom:0; }
+  strong{ color:var(--ink); font-weight:600; }
+  .lead{ font-size:19.5px; line-height:1.6; color:var(--ink); max-width:44ch; }
+  .lead em{ font-family:"Playfair Display",serif; font-style:italic; color:var(--sea-deep); font-size:1.06em; }
+
+  /* territory */
+  .territory{ padding:54px 0 8px; border-bottom:1px solid var(--line-soft); }
+  .terr-head{ margin-bottom:30px; }
+  .terr-tag{
+    font-family:"Jost",sans-serif; font-size:11px; font-weight:600; letter-spacing:.26em; text-transform:uppercase;
+    color:var(--gold-deep); display:flex; align-items:center; gap:12px; margin-bottom:14px;
+  }
+  .terr-tag .ix{ font-family:"Playfair Display",serif; font-style:italic; color:var(--sea); font-size:15px; letter-spacing:0; }
+  .terr-tag .ln{ flex:1; height:1px; background:var(--line); }
+  .terr-title{ font-family:"Playfair Display",serif; font-weight:600; font-size:clamp(26px,4.4vw,38px); line-height:1.05; margin:0 0 8px; color:var(--ink); }
+  .terr-desc{ font-family:"Playfair Display",serif; font-style:italic; font-size:18.5px; color:var(--ink-soft); max-width:48ch; margin:0; }
+
+  /* name block */
+  .name{ display:grid; grid-template-columns:62px 1fr; gap:4px 26px; padding:30px 0; border-top:1px solid var(--line-soft); }
+  .name:first-of-type{ border-top:0; }
+  .name .no{ font-family:"Playfair Display",serif; font-weight:500; font-size:22px; color:var(--gold); padding-top:8px; line-height:1; }
+  .nm-title{ font-family:"Playfair Display",serif; font-weight:600; font-size:clamp(30px,5vw,44px); line-height:1.02; margin:0 0 4px; color:var(--ink); }
+  .nm-ess{ font-family:"Playfair Display",serif; font-style:italic; font-size:18.5px; color:var(--sea-deep); margin:0 0 12px; }
+  .nm-body{ font-size:16.5px; line-height:1.6; color:var(--ink-soft); max-width:54ch; margin:0; }
+  .nm-body strong{ color:var(--ink); }
+  .nm-hook{
+    display:inline-block; margin-top:14px; font-family:"Jost",sans-serif; font-size:12px; font-weight:600;
+    letter-spacing:.12em; text-transform:uppercase; color:var(--sea-deep);
+    border:1px solid var(--line); border-radius:999px; padding:5px 14px; background:var(--paper-2);
+  }
+  .nm-hook b{ color:var(--gold-deep); font-weight:600; }
+
+  /* closing */
+  .closing{ padding:58px 0 6px; }
+  .closing .big{
+    font-family:"Playfair Display",serif; font-weight:500; font-style:italic;
+    font-size:clamp(25px,4.4vw,38px); line-height:1.24; color:var(--ink); max-width:24ch;
+  }
+  .closing .big b{ font-style:normal; font-weight:600; color:var(--sea-deep); }
+  .next{ margin-top:26px; font-size:16.5px; color:var(--ink-soft); max-width:50ch; }
+  .next strong{ color:var(--ink); }
+
+  footer{
+    margin-top:46px; padding-top:24px; border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:12px;
+    font-family:"Jost",sans-serif; font-size:11.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-faint);
+  }
+  footer .ar{ font-family:"Reem Kufi",sans-serif; letter-spacing:0; }
+  footer .sig{ color:var(--ink-soft); font-weight:600; }
+
+  .reveal{ opacity:0; transform:translateY(15px); animation:rise .72s cubic-bezier(.2,.7,.2,1) forwards; }
+  @keyframes rise{ to{ opacity:1; transform:none; } }
+  .d1{animation-delay:.04s}.d2{animation-delay:.12s}.d3{animation-delay:.2s}.d4{animation-delay:.28s}.d5{animation-delay:.36s}
+  @media (prefers-reduced-motion:reduce){ .reveal{ animation:none; opacity:1; transform:none; } }
+
+  @media (max-width:680px){
+    .wrap{ padding:50px 22px 70px; }
+    .name{ grid-template-columns:1fr; gap:3px; }
+    .name .no{ padding-top:0; }
+    body{ font-size:16px; }
+  }
+  @media print{
+    @page{ margin:13mm; }
+    body{ background:#fff; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body::before{ display:none; }
+    .reveal{ animation:none; opacity:1; transform:none; }
+    .territory,.name,section{ break-inside:avoid; }
+  }
+</style>
+</head>
+<body>
+<!-- portfolio-nav (added) -->
+<a href="../index.html" class="oe-backhome" aria-label="Back to Omar Elewa, portfolio home">
+  <span class="oe-ar">&larr;</span><span class="oe-tx">Omar Elewa</span>
+</a>
+<style>
+  .oe-backhome{position:fixed;left:18px;bottom:18px;z-index:99999;display:inline-flex;align-items:center;gap:8px;
+    font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+    color:#fff;text-decoration:none;background:rgba(20,18,14,.62);border:1px solid rgba(255,255,255,.16);
+    padding:9px 15px 9px 13px;border-radius:999px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    box-shadow:0 8px 24px rgba(0,0,0,.28);transition:background .25s ease,transform .25s ease;}
+  .oe-backhome:hover{background:rgba(20,18,14,.88);transform:translateY(-2px);}
+  .oe-backhome .oe-ar{display:inline-block;transition:transform .25s ease;}
+  .oe-backhome:hover .oe-ar{transform:translateX(-3px);}
+  @media print{.oe-backhome{display:none !important;}}
+  @media (max-width:520px){.oe-backhome{left:12px;bottom:12px;font-size:11px;padding:8px 13px;}}
+</style>
+<!-- /portfolio-nav -->
+
+<div class="wrap">
+
+  <header>
+    <div class="brandline reveal d1">
+      <span>Naming Presentation</span>
+      <span class="right">Verbal Identity &amp; Strategy</span>
+    </div>
+    <h1 class="title reveal d2">A Destination<span class="small">in Alexandria</span></h1>
+    <p class="sub reveal d3">Open-Air Retail <span class="pip"></span> <span class="ar">الإسكندرية</span> <span class="pip"></span> Eleven Names · Four Territories</p>
+    <p class="thesis reveal d3">Don't borrow energy from elsewhere. <span class="hl">Take it from the city.</span></p>
+  </header>
+
+  <section>
+    <div class="eyebrow reveal d2"><span class="bar"></span> The City Is the Brief</div>
+    <p class="lead reveal d3">The task: name a new open-air retail destination in the heart of Alexandria, a place to gather, shop, eat and linger. The strategy is single-minded. Alexandria is the muse. Its <em>founding date,</em> its <em>lighthouse,</em> its <em>sea,</em> its <em>rhythm,</em> its <em>hidden lanes</em>, each one a different way for the destination to wear the city's name. What follows are eleven routes, sorted into four territories.</p>
+  </section>
+
+  <!-- TERRITORY 1 -->
+  <div class="territory">
+    <div class="terr-head reveal d2">
+      <div class="terr-tag"><span class="ix">Territory I</span><span class="ln"></span></div>
+      <h2 class="terr-title">Heritage &amp; Story</h2>
+      <p class="terr-desc">Names that reach into 2,300 years of Alexandria and carry the city's myth into a modern address.</p>
+    </div>
+
+    <div class="name reveal d3">
+      <div class="no">01</div>
+      <div>
+        <h3 class="nm-title">Three Thirty</h3>
+        <p class="nm-ess">Alexandria, est. 330 BCE.</p>
+        <p class="nm-body">A number that's secretly a birth year. Founded in 330 BCE, Alexandria carries two and a half thousand years of history, and Three Thirty wears all of it lightly. It turns a date into a destination: contemporary enough for a new retail address, deep enough to mean something <strong>no rival can claim.</strong></p>
+        <span class="nm-hook">The hook · <b>a date becomes a name</b></span>
+      </div>
+    </div>
+
+    <div class="name reveal d3">
+      <div class="no">02</div>
+      <div>
+        <h3 class="nm-title">Old Town</h3>
+        <p class="nm-ess">Where history keeps shop.</p>
+        <p class="nm-body">Old Town trades on instant warmth. It promises lived-in character and cobbled charm, a place that feels like it's always been here, even on opening day. It's globally understood shorthand for the soulful heart of a city, and it lends a brand-new development a sense of belonging from the very first visit.</p>
+      </div>
+    </div>
+
+    <div class="name reveal d4">
+      <div class="no">03</div>
+      <div>
+        <h3 class="nm-title">BayLight</h3>
+        <p class="nm-ess">A beacon on the bay.</p>
+        <p class="nm-body">BayLight reaches for Alexandria's greatest icon, the ancient Lighthouse, one of the Seven Wonders, which guided ships home for centuries. It casts the destination as a modern beacon: a guiding point of gathering, discovery and coastal life. Luminous and landmark-worthy. <strong>A name that asks to be lit at night.</strong></p>
+        <span class="nm-hook">The hook · <b>the Lighthouse of Alexandria</b></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERRITORY 2 -->
+  <div class="territory">
+    <div class="terr-head reveal d2">
+      <div class="terr-tag"><span class="ix">Territory II</span><span class="ln"></span></div>
+      <h2 class="terr-title">Sea &amp; Coast</h2>
+      <p class="terr-desc">Names drawn from the Mediterranean itself: the blue, the breeze, and the port that made the city's name.</p>
+    </div>
+
+    <div class="name reveal d3">
+      <div class="no">04</div>
+      <div>
+        <h3 class="nm-title">Blue Sands</h3>
+        <p class="nm-ess">Turquoise water, golden shore.</p>
+        <p class="nm-body">Blue Sands paints the picture before you arrive: the Mediterranean's blue meeting Alexandria's warm sand. Serene, scenic and unmistakably coastal, it frames the destination as a breezy escape in the middle of the city. Soft, premium, and easy to fall for.</p>
+      </div>
+    </div>
+
+    <div class="name reveal d3">
+      <div class="no">05</div>
+      <div>
+        <h3 class="nm-title">Port31</h3>
+        <p class="nm-ess">Mediterranean gateway · 31°N.</p>
+        <p class="nm-body">Port31 fuses two truths into one confident mark: Alexandria as a great Mediterranean port, and its place on the map at 31° north. <strong>"Port"</strong> signals trade, arrival and openness to the world; <strong>"31"</strong> makes it precise, modern and ownable. A name where commerce and coordinates meet.</p>
+        <span class="nm-hook">The hook · <b>latitude 31°N</b></span>
+      </div>
+    </div>
+
+    <div class="name reveal d4">
+      <div class="no">06</div>
+      <div>
+        <h3 class="nm-title">UpNorth</h3>
+        <p class="nm-ess">The north coast, elevated.</p>
+        <p class="nm-body">Alexandria sits at the top of the map, and UpNorth turns geography into attitude. It carries a cool, aspirational lift, "going up north" as a little escape, pairing the Mediterranean breeze with modern polish. Confident, directional, effortlessly lifestyle.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERRITORY 3 -->
+  <div class="territory">
+    <div class="terr-head reveal d2">
+      <div class="terr-tag"><span class="ix">Territory III</span><span class="ln"></span></div>
+      <h2 class="terr-title">Rhythm &amp; Motion</h2>
+      <p class="terr-desc">Names that move: built on the pulse and constant energy of the street.</p>
+    </div>
+
+    <div class="name reveal d3">
+      <div class="no">07</div>
+      <div>
+        <h3 class="nm-title">AlexMotion</h3>
+        <p class="nm-ess">The city, in motion.</p>
+        <p class="nm-body">Alexandria never stands still: the surge of the markets, the flow along the Corniche, the breeze off the sea. AlexMotion bottles that restless energy and gives the destination a sense of perpetual life, a place that moves with the city, and keeps it moving.</p>
+      </div>
+    </div>
+
+    <div class="name reveal d3">
+      <div class="no">08</div>
+      <div>
+        <h3 class="nm-title">Ten Beats</h3>
+        <p class="nm-ess">The rhythm of the city.</p>
+        <p class="nm-body">Ten Beats hears the centre as music, a row of businesses playing in time, the pulse of a place that's always alive. <strong>"Ten"</strong> gives it a crisp, countable identity, <strong>"beats"</strong> keeps it young and energetic. A name with a tempo.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERRITORY 4 -->
+  <div class="territory">
+    <div class="terr-head reveal d2">
+      <div class="terr-tag"><span class="ix">Territory IV</span><span class="ln"></span></div>
+      <h2 class="terr-title">Everyday &amp; Human</h2>
+      <p class="terr-desc">Names that feel like people and habits: the place you return to without thinking.</p>
+    </div>
+
+    <div class="name reveal d3">
+      <div class="no">09</div>
+      <div>
+        <h3 class="nm-title">Goto</h3>
+        <p class="nm-ess">Your go-to. For everything.</p>
+        <p class="nm-body">The sharpest piece of plain-language branding in the set. Goto is the place you name without thinking: the errand, the coffee, the meet-up, the "let's just go to…". It builds habit into the brand and quietly dreams of becoming a verb. Effortless to say, impossible to forget.</p>
+        <span class="nm-hook">The hook · <b>a name that becomes a verb</b></span>
+      </div>
+    </div>
+
+    <div class="name reveal d3">
+      <div class="no">10</div>
+      <div>
+        <h3 class="nm-title">Alleyway</h3>
+        <p class="nm-ess">Wander in.</p>
+        <p class="nm-body">Alleyway reframes a shopping centre as a network of intimate lanes to explore rather than a corridor to march down. Narrow, characterful, full of small surprises. It borrows the charm of Alexandria's hidden backstreets and turns "getting a little lost" into the whole appeal.</p>
+      </div>
+    </div>
+
+    <div class="name reveal d4">
+      <div class="no">11</div>
+      <div>
+        <h3 class="nm-title">Alex &amp; Ria</h3>
+        <p class="nm-ess">Alexandria, on first-name terms.</p>
+        <p class="nm-body">The wittiest name in the room. Split "Alexandria" and you get two characters, <strong>Alex</strong> and <strong>Ria</strong>, and suddenly a place feels like people. Warm, playful and instantly memorable, it frames the destination as a friendly meeting of personalities, with a quiet nod to the partnership behind it. A human spin on a monumental name.</p>
+        <span class="nm-hook">The hook · <b>Alexandria → Alex &amp; Ria</b></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="closing reveal d2">
+    <div class="eyebrow" style="margin-bottom:18px;"><span class="bar"></span> Where to From Here</div>
+    <p class="big">A shortlist is a conversation, not a verdict. The strongest routes turn a <b>fact</b> about Alexandria into a <b>feeling</b>: a founding date, a latitude, a lighthouse, a split of the city's own name.</p>
+    <p class="next">Because a story no competitor can copy is the most defensible asset a name can own. <strong>Recommended next step:</strong> shortlist three, pressure-test each for trademark and domain availability, and live with them on a sign, a tote bag and a storefront before deciding.</p>
+  </div>
+
+  <footer>
+    <span>Naming Presentation · Alexandria · <span class="ar">الإسكندرية</span></span>
+    <span class="sig">Verbal Identity · Omar Elewa</span>
+  </footer>
+
+</div>
+</body>
+</html>
