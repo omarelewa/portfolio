@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Beauty Brand — Naming &amp; Brand Strategy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F5EAE6;
+    --paper-2:#FBF3EF;
+    --card:#FCF6F2;
+    --ink:#2A1D26;
+    --ink-soft:#6C5A64;
+    --ink-faint:#A89099;
+    --rose:#B85C6B;
+    --rose-deep:#97394A;
+    --plum:#6E4660;
+    --line:rgba(42,29,38,0.13);
+    --line-soft:rgba(42,29,38,0.065);
+    --spectral:linear-gradient(90deg,#C56E7A 0%,#CD9A5C 26%,#9FAE6A 50%,#6FA6B0 74%,#8E83B8 100%);
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Outfit", system-ui, sans-serif;
+    font-size:17px; line-height:1.65; font-weight:400;
+    background-image:
+      radial-gradient(1100px 540px at 86% -10%, rgba(184,92,107,0.14), transparent 60%),
+      radial-gradient(900px 520px at 4% 3%, rgba(110,70,96,0.10), transparent 60%);
+    background-attachment:fixed;
+  }
+  body::before{
+    content:""; position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.5;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+  .wrap{ position:relative; z-index:1; max-width:850px; margin:0 auto; padding:80px 46px 104px; }
+
+  .eyebrow{
+    font-family:"Outfit", sans-serif; font-size:11.5px; font-weight:600;
+    letter-spacing:.3em; text-transform:uppercase; color:var(--rose-deep);
+    display:inline-flex; align-items:center; gap:12px;
+  }
+  .eyebrow .bar{ width:28px; height:2px; background:var(--spectral); display:inline-block; border-radius:2px; }
+
+  /* hero */
+  header{ padding-bottom:18px; }
+  .brandline{
+    font-family:"Outfit", sans-serif; font-weight:500; font-size:11.5px;
+    letter-spacing:.28em; text-transform:uppercase; color:var(--ink-soft);
+    display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;
+    padding-bottom:34px; border-bottom:1px solid var(--line);
+  }
+  .brandline .right{ color:var(--ink-faint); }
+  .title{
+    font-family:"Bodoni Moda", serif; font-weight:600;
+    font-size:clamp(48px,9vw,94px); line-height:.98; letter-spacing:-0.005em;
+    margin:52px 0 6px; color:var(--ink);
+  }
+  .title .small{ display:block; font-style:italic; font-weight:500; font-size:.4em; color:var(--rose-deep); margin-top:.24em; letter-spacing:.01em; }
+  .spectral-rule{ width:200px; height:3px; background:var(--spectral); border-radius:3px; margin:18px 0 26px; }
+  .sub{
+    font-family:"Outfit", sans-serif; font-weight:600; font-size:13px;
+    letter-spacing:.22em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 30px;
+    display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+  }
+  .sub .pip{ width:5px; height:5px; border-radius:50%; background:var(--rose); }
+  .thesis{
+    font-family:"Bodoni Moda", serif; font-style:italic; font-weight:500;
+    font-size:clamp(24px,4vw,36px); line-height:1.22; color:var(--ink); max-width:23ch; margin:0;
+  }
+  .thesis .hl{ font-style:normal; color:var(--rose-deep); }
+
+  section{ padding:48px 0; border-bottom:1px solid var(--line-soft); }
+  h2{ font-family:"Bodoni Moda", serif; font-weight:600; font-size:32px; line-height:1.1; margin:14px 0 16px; }
+  p{ margin:0 0 1.05em; } p:last-child{ margin-bottom:0; }
+  strong{ color:var(--ink); font-weight:600; }
+  em{ font-style:italic; }
+  .lead{ font-size:19px; line-height:1.6; color:var(--ink); max-width:46ch; }
+  .lead em{ font-family:"Bodoni Moda",serif; color:var(--rose-deep); font-size:1.04em; }
+
+  /* strategy sub-blocks */
+  .sblock{ margin-bottom:30px; }
+  .sblock .lab{ font-family:"Outfit",sans-serif; font-size:11px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--rose-deep); margin-bottom:8px; }
+  .sblock p{ font-size:16.5px; color:var(--ink-soft); max-width:54ch; }
+  .sblock p strong{ color:var(--ink); }
+
+  /* the fork pull */
+  .fork{
+    font-family:"Bodoni Moda",serif; font-style:italic; font-size:clamp(22px,3.6vw,30px);
+    line-height:1.28; color:var(--ink); max-width:26ch; margin:6px 0 4px; padding-left:24px;
+    position:relative;
+  }
+  .fork::before{ content:""; position:absolute; left:0; top:6px; bottom:6px; width:3px; background:var(--spectral); border-radius:3px; }
+  .fork b{ font-style:normal; color:var(--rose-deep); }
+
+  /* two worlds */
+  .worlds{ display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:26px; }
+  .world{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:26px 26px 28px; }
+  .world .wtag{ font-family:"Outfit",sans-serif; font-size:11px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-faint); }
+  .world h3{ font-family:"Bodoni Moda",serif; font-weight:600; font-size:23px; line-height:1.1; margin:6px 0 6px; color:var(--ink); }
+  .world .names{ font-family:"Outfit",sans-serif; font-weight:600; font-size:13px; letter-spacing:.04em; color:var(--rose-deep); margin:0 0 16px; }
+  .world dl{ margin:0; }
+  .world dt{ font-family:"Outfit",sans-serif; font-size:10.5px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); margin-top:12px; }
+  .world dd{ margin:2px 0 0; font-size:15px; line-height:1.45; color:var(--ink-soft); }
+  .world dd.promise{ font-family:"Bodoni Moda",serif; font-style:italic; font-size:17px; color:var(--plum); }
+
+  /* names */
+  .terr-head{ margin:8px 0 22px; }
+  .terr-tag{
+    font-family:"Outfit",sans-serif; font-size:11px; font-weight:600; letter-spacing:.24em; text-transform:uppercase;
+    color:var(--rose-deep); display:flex; align-items:center; gap:12px; margin-bottom:12px;
+  }
+  .terr-tag .ix{ font-family:"Bodoni Moda",serif; font-style:italic; color:var(--plum); font-size:15px; letter-spacing:0; text-transform:none; }
+  .terr-tag .ln{ flex:1; height:1px; background:var(--line); }
+  .terr-title{ font-family:"Bodoni Moda",serif; font-weight:600; font-size:clamp(24px,4vw,32px); margin:0; color:var(--ink); }
+
+  .name{ display:grid; grid-template-columns:52px 1fr; gap:6px 24px; padding:30px 0; border-top:1px solid var(--line-soft); }
+  .name .no{ font-family:"Bodoni Moda",serif; font-size:22px; color:var(--rose); padding-top:8px; line-height:1; }
+  .nm-title{ font-family:"Bodoni Moda",serif; font-weight:600; font-size:clamp(32px,5.4vw,48px); line-height:1.0; margin:0 0 4px; color:var(--ink); letter-spacing:.01em; }
+  .nm-title .bang{ color:var(--rose); }
+  .nm-title .ft{ font-style:italic; font-weight:500; }
+  .nm-ess{ font-family:"Bodoni Moda",serif; font-style:italic; font-size:18px; color:var(--rose-deep); margin:0 0 12px; }
+  .nm-body{ font-size:16.5px; line-height:1.58; color:var(--ink-soft); max-width:55ch; margin:0; }
+  .nm-body strong{ color:var(--ink); }
+  .nm-body em{ font-family:"Bodoni Moda",serif; font-style:italic; color:var(--plum); }
+  .verbal{ margin:14px 0 0; padding:0; list-style:none; }
+  .verbal .vl{ font-family:"Outfit",sans-serif; font-size:11px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:7px; }
+  .verbal li.line{ font-family:"Bodoni Moda",serif; font-style:italic; font-size:16.5px; color:var(--ink); line-height:1.5; padding-left:16px; position:relative; }
+  .verbal li.line::before{ content:""; position:absolute; left:0; top:.7em; width:6px; height:1px; background:var(--rose); }
+  .nm-hook{
+    display:inline-block; margin-top:14px; font-family:"Outfit",sans-serif; font-size:11.5px; font-weight:600;
+    letter-spacing:.12em; text-transform:uppercase; color:var(--ink);
+    border:1px solid var(--line); border-radius:999px; padding:5px 14px; background:var(--paper-2);
+  }
+  .nm-hook b{ color:var(--rose-deep); font-weight:600; }
+
+  /* recommendation */
+  .rec{ padding:56px 0 6px; }
+  .rec .big{ font-family:"Bodoni Moda",serif; font-style:italic; font-size:clamp(24px,4.2vw,36px); line-height:1.24; color:var(--ink); max-width:25ch; }
+  .rec .big b{ font-style:normal; color:var(--rose-deep); }
+  .rec ul{ margin:24px 0 0; padding:0; list-style:none; }
+  .rec li{ position:relative; padding-left:22px; margin-bottom:13px; font-size:16.5px; color:var(--ink-soft); max-width:56ch; }
+  .rec li::before{ content:""; position:absolute; left:0; top:.65em; width:9px; height:9px; border-radius:50%; background:var(--spectral); }
+  .rec li strong{ color:var(--ink); }
+
+  footer{
+    margin-top:46px; padding-top:24px; border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:12px;
+    font-family:"Outfit",sans-serif; font-size:11.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-faint);
+  }
+  footer .sig{ color:var(--ink-soft); font-weight:600; }
+
+  .reveal{ opacity:0; transform:translateY(15px); animation:rise .72s cubic-bezier(.2,.7,.2,1) forwards; }
+  @keyframes rise{ to{ opacity:1; transform:none; } }
+  .d1{animation-delay:.04s}.d2{animation-delay:.12s}.d3{animation-delay:.2s}.d4{animation-delay:.28s}.d5{animation-delay:.36s}
+  @media (prefers-reduced-motion:reduce){ .reveal{ animation:none; opacity:1; transform:none; } }
+
+  @media (max-width:680px){
+    .wrap{ padding:50px 22px 70px; }
+    .worlds{ grid-template-columns:1fr; }
+    .name{ grid-template-columns:1fr; gap:4px; }
+    .name .no{ padding-top:0; }
+    body{ font-size:16px; }
+  }
+  @media print{
+    @page{ margin:13mm; }
+    body{ background:#fff; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body::before{ display:none; }
+    .reveal{ animation:none; opacity:1; transform:none; }
+    .worlds,.name,section,.world{ break-inside:avoid; }
+  }
+</style>
+</head>
+<body>
+<!-- portfolio-nav (added) -->
+<a href="../index.html" class="oe-backhome" aria-label="Back to Omar Elewa — portfolio home">
+  <span class="oe-ar">&larr;</span><span class="oe-tx">Omar Elewa</span>
+</a>
+<style>
+  .oe-backhome{position:fixed;left:18px;bottom:18px;z-index:99999;display:inline-flex;align-items:center;gap:8px;
+    font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+    color:#fff;text-decoration:none;background:rgba(20,18,14,.62);border:1px solid rgba(255,255,255,.16);
+    padding:9px 15px 9px 13px;border-radius:999px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    box-shadow:0 8px 24px rgba(0,0,0,.28);transition:background .25s ease,transform .25s ease;}
+  .oe-backhome:hover{background:rgba(20,18,14,.88);transform:translateY(-2px);}
+  .oe-backhome .oe-ar{display:inline-block;transition:transform .25s ease;}
+  .oe-backhome:hover .oe-ar{transform:translateX(-3px);}
+  @media print{.oe-backhome{display:none !important;}}
+  @media (max-width:520px){.oe-backhome{left:12px;bottom:12px;font-size:11px;padding:8px 13px;}}
+</style>
+<!-- /portfolio-nav -->
+
+<div class="wrap">
+
+  <header>
+    <div class="brandline reveal d1">
+      <span>Naming &amp; Brand Strategy</span>
+      <span class="right">Verbal Identity &amp; Positioning</span>
+    </div>
+    <h1 class="title reveal d2">A Beauty Brand<span class="small">naming &amp; the strategy beneath it</span></h1>
+    <div class="spectral-rule reveal d2"></div>
+    <p class="sub reveal d3">Eight Names <span class="pip"></span> Two Worlds <span class="pip"></span> One Decision</p>
+    <p class="thesis reveal d3">These aren't one shortlist. <span class="hl">They're two brands wearing one folder.</span></p>
+  </header>
+
+  <!-- STRATEGY -->
+  <section>
+    <div class="eyebrow reveal d2"><span class="bar"></span> The Mini Brand Strategy</div>
+
+    <div class="sblock reveal d3" style="margin-top:22px;">
+      <div class="lab">The Opportunity</div>
+      <p>Beauty is a loud, crowded category — a wall of shades, hype and influencer noise. A new brand wins not on more product, but on a sharper point of view. Two spaces remain genuinely winnable: <strong>intelligent, light-led colour that flatters every skin honestly</strong>, and <strong>makeup as effortless self-expression rather than performance.</strong> Your names split along exactly that line — which is the most useful thing a naming round can reveal.</p>
+    </div>
+
+    <div class="sblock reveal d3">
+      <div class="lab">The Audience</div>
+      <p>A modern beauty buyer — design-literate, value-driven, sceptical of hype. She wants fewer, better products that feel like <em>her</em>, real inclusivity, and a brand with taste and a clear idea. She buys into a point of view, not a promo.</p>
+    </div>
+
+    <div class="sblock reveal d4">
+      <div class="lab">The Strategic Read</div>
+      <p class="fork">Eight names, but two brands. Three build a world of <b>light and clarity;</b> five build a world of <b>intimacy and confidence.</b> The question isn't "which name is prettiest" — it's "which world are we building?" Choose that, and the name chooses itself.</p>
+    </div>
+
+    <div class="worlds reveal d4">
+      <div class="world">
+        <div class="wtag">World A</div>
+        <h3>The Optics of Beauty</h3>
+        <p class="names">PRYSM · LUCID · UNDER TONE</p>
+        <dl>
+          <dt>Idea</dt><dd>Colour, engineered around light.</dd>
+          <dt>Positioning</dt><dd>Radiant, true-to-skin colour made with the precision of optics — beauty that reveals rather than masks.</dd>
+          <dt>Personality</dt><dd>Refined, modern, quietly expert. Scientific, never clinical.</dd>
+          <dt>Promise</dt><dd class="promise">"Your truest colour, revealed."</dd>
+          <dt>Best for</dt><dd>a premium, inclusive, clean-leaning brand built for authority and longevity.</dd>
+        </dl>
+      </div>
+      <div class="world">
+        <div class="wtag">World B</div>
+        <h3>Beauty as a Gesture</h3>
+        <p class="names">W!NK · FT. YOU · FEATURES · FLIRT · WHISPERS</p>
+        <dl>
+          <dt>Idea</dt><dd>The small gesture that makes a big presence.</dd>
+          <dt>Positioning</dt><dd>Makeup as effortless confidence and allure — a flick, a flush, a wink — not a mask, not a routine.</dd>
+          <dt>Personality</dt><dd>Playful, warm, flirtatious, you-first. Talks like a confident friend.</dd>
+          <dt>Promise</dt><dd class="promise">"Small gesture. Big presence."</dd>
+          <dt>Best for</dt><dd>a younger, expressive, social-first brand with attitude and built-in shareability.</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="sblock reveal d5" style="margin-top:28px;margin-bottom:0;">
+      <div class="lab">Tone of Voice</div>
+      <p><strong>World A</strong> speaks precise and luminous — fewer words, more light. <strong>World B</strong> speaks cheeky and intimate — a wink in words.</p>
+    </div>
+  </section>
+
+  <!-- WORLD A NAMES -->
+  <div class="territory">
+    <div class="terr-head reveal d2">
+      <div class="terr-tag"><span class="ix">World A</span><span class="ln"></span></div>
+      <h2 class="terr-title">The Optics of Beauty</h2>
+    </div>
+
+    <div class="name reveal d3">
+      <div class="no">01</div>
+      <div>
+        <h3 class="nm-title">PRYSM</h3>
+        <p class="nm-ess">Split the light. Own the spectrum.</p>
+        <p class="nm-body">A prism takes one beam of white light and reveals the entire spectrum hiding inside it — the perfect metaphor for a brand that holds <em>every shade.</em> The deliberate <strong>PRYSM</strong> spelling makes it modern, designed and ownable where "prism" never could be. It turns colour into a science you want to wear — and the spectrum metaphor builds inclusivity in from day one.</p>
+        <ul class="verbal">
+          <li class="vl">The verbal range</li>
+          <li class="line">Split the light. Own the spectrum.</li>
+          <li class="line">Colour, refracted. Beauty, refined.</li>
+          <li class="line">Turn angle into aura.</li>
+          <li class="line">One shape. Infinite shades.</li>
+        </ul>
+        <span class="nm-hook">The hook · <b>every shade, from one beam</b></span>
+      </div>
+    </div>
+
+    <div class="name reveal d3">
+      <div class="no">02</div>
+      <div>
+        <h3 class="nm-title">LUCID</h3>
+        <p class="nm-ess">Purity of light. Depth of shade.</p>
+        <p class="nm-body">Lucid means clear, luminous and vivid — with a dreamlike second life in "lucid dream." For beauty it promises both <em>glow and honesty:</em> luminous skin, true colour, clean transparency. Calm, premium and a touch poetic — a real word elevated into an ownable idea.</p>
+        <ul class="verbal">
+          <li class="vl">The verbal range</li>
+          <li class="line">See your glow, clearly.</li>
+          <li class="line">Purity of light. Depth of shade.</li>
+          <li class="line">Awaken the vivid.</li>
+          <li class="line">Dreams in colour, clarity in wear.</li>
+        </ul>
+        <span class="nm-hook">The hook · <b>clarity you can wear</b></span>
+      </div>
+    </div>
+
+    <div class="name reveal d4">
+      <div class="no">03</div>
+      <div>
+        <h3 class="nm-title">UNDER TONE</h3>
+        <p class="nm-ess">Light your look.</p>
+        <p class="nm-body">Undertone is <em>the</em> word every shade-match begins with — the hue beneath the skin that decides what flatters you. Owning it signals real expertise in matching colour to every complexion, and quietly promises inclusivity. The split — <strong>UNDER · TONE</strong> — adds a second beat: understated, but precisely yours.</p>
+        <ul class="verbal">
+          <li class="vl">The verbal range</li>
+          <li class="line">Light your look.</li>
+          <li class="line">Wear sunlight — minus the wait.</li>
+          <li class="line">Soft radiance, strong impact.</li>
+        </ul>
+        <span class="nm-hook">The hook · <b>where every shade-match starts</b></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORLD B NAMES -->
+  <div class="territory">
+    <div class="terr-head reveal d2">
+      <div class="terr-tag"><span class="ix">World B</span><span class="ln"></span></div>
+      <h2 class="terr-title">Beauty as a Gesture</h2>
+    </div>
+
+    <div class="name reveal d3">
+      <div class="no">04</div>
+      <div>
+        <h3 class="nm-title">W<span class="bang">!</span>NK</h3>
+        <p class="nm-ess">Let your lids do the flirting.</p>
+        <p class="nm-body">A wink is flirtation distilled into a single gesture — and "in a blink" makes it effortless. Swapping the <em>i</em> for an exclamation mark turns the name into a ready-made logo and literalises the whole promise: small gesture, big <em>!</em>. Young, confident and instantly memorable.</p>
+        <ul class="verbal">
+          <li class="vl">The verbal range</li>
+          <li class="line">Small gesture. Big impact.</li>
+          <li class="line">Get noticed in a blink.</li>
+          <li class="line">Tiny gesture, major impact.</li>
+          <li class="line">Let your lids do the flirting.</li>
+        </ul>
+        <span class="nm-hook">The hook · <b>the flirt, in one keystroke</b></span>
+      </div>
+    </div>
+
+    <div class="name reveal d3">
+      <div class="no">05</div>
+      <div>
+        <h3 class="nm-title"><span class="ft">ft.</span> You</h3>
+        <p class="nm-ess">The spotlight belongs to you.</p>
+        <p class="nm-body">The sharpest, most original idea in the set. <strong>"ft."</strong> is the music-credit shorthand for <em>featuring</em> — so the product bills <em>you</em> as the star and casts itself as the supporting act. It flips beauty's whole logic from mask to amplifier, nails the on-trend "you-first" truth, and speaks fluent culture to a younger audience. A name you could build a universe around. <em>(Set lowercase, the way a track credit always is.)</em></p>
+        <ul class="verbal">
+          <li class="vl">The verbal range</li>
+          <li class="line">Starring pigment, subtle touch.</li>
+          <li class="line">Quick swipe, headline look.</li>
+          <li class="line">Minimal effort, maximum presence.</li>
+          <li class="line">The spotlight belongs to you.</li>
+        </ul>
+        <span class="nm-hook">The hook · <b>you headline; makeup just features</b></span>
+      </div>
+    </div>
+
+    <div class="name reveal d4">
+      <div class="no">06</div>
+      <div>
+        <h3 class="nm-title">FEATURES</h3>
+        <p class="nm-ess">Highlight what's already yours.</p>
+        <p class="nm-body">Features is two ideas in one elegant word. First, your <em>features</em> — the eyes, lips and cheekbones makeup exists to flatter — which casts the brand as an enhancer, never a mask. Second, <em>featuring</em> — the film-and-music sense of top billing — so the line quietly makes you the star. It's the cool, grown-up cousin of <strong>ft. You</strong>: the same you-first truth, told as a confident noun instead of a playful credit. Minimal, modern and effortlessly premium — a single word that doubles as a promise.</p>
+        <ul class="verbal">
+          <li class="vl">The verbal range</li>
+          <li class="line">We don't cover. We feature.</li>
+          <li class="line">Your features, in focus.</li>
+          <li class="line">Starring: you.</li>
+          <li class="line">Less makeup. More you.</li>
+        </ul>
+        <span class="nm-hook">The hook · <b>your features, top billing</b></span>
+      </div>
+    </div>
+
+    <div class="name reveal d4">
+      <div class="no">07</div>
+      <div>
+        <h3 class="nm-title">FLIRT</h3>
+        <p class="nm-ess">Soft glide, loud heartbeat.</p>
+        <p class="nm-body">One bold, emotional word for the oldest truth in beauty — the spark, the magnetism, the play. Direct, cheeky and confident, it hands a brand instant personality. <strong>A note for the brief:</strong> "Flirt" has appeared in beauty before, so it'll need a hard trademark check — but as an <em>idea,</em> it's pure attitude.</p>
+        <ul class="verbal">
+          <li class="vl">The verbal range</li>
+          <li class="line">Whisper-light colour, undeniable spark.</li>
+          <li class="line">Bare touch, vivid attraction.</li>
+          <li class="line">Soft glide, loud heartbeat.</li>
+        </ul>
+        <span class="nm-hook">The hook · <b>attraction, distilled to a word</b></span>
+      </div>
+    </div>
+
+    <div class="name reveal d4">
+      <div class="no">08</div>
+      <div>
+        <h3 class="nm-title">WHISPERS</h3>
+        <p class="nm-ess">Barely a whisper, plenty to say.</p>
+        <p class="nm-body">A whisper is intimate, soft and quietly powerful — the perfect name for the "quiet luxury" and no-makeup-makeup moment. It promises subtle allure with a lingering afterglow: restraint that still turns heads. Elegant and sensual — and the plural makes it feel like a collection of secrets.</p>
+        <ul class="verbal">
+          <li class="vl">The verbal range</li>
+          <li class="line">Soft hush, striking afterglow.</li>
+          <li class="line">Gentle sweep, lingering allure.</li>
+          <li class="line">Barely a whisper, plenty to say.</li>
+        </ul>
+        <span class="nm-hook">The hook · <b>the quiet that says everything</b></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RECOMMENDATION -->
+  <div class="rec reveal d2">
+    <div class="eyebrow" style="margin-bottom:18px;"><span class="bar"></span> Where to From Here</div>
+    <p class="big">Resolve the fork first — <b>World A or World B.</b> It sets everything downstream: the identity, the audience, even how you name the products.</p>
+    <ul>
+      <li>The most ownable, build-a-universe names are <strong>PRYSM</strong> — distinctive spelling, rich metaphor — for World A, and <strong>ft. You</strong> — genuinely original, culturally perfect — for World B.</li>
+      <li><strong>Features</strong> and <strong>ft. You</strong> are one idea in two registers — the cool, editorial noun and the playful music-credit. Pick the voice: Features reads grown-up and confident; ft. You reads young and witty. Run one, not both.</li>
+      <li><strong>UNDER TONE</strong> is the most strategically credible if inclusivity and shade expertise lead the positioning.</li>
+      <li>Pressure-test the common-word names — <strong>LUCID, FLIRT, WHISPERS</strong> — hardest for trademark and domain; they're beautiful but well-trodden in beauty.</li>
+      <li>Then shortlist two or three within the chosen world, clear trademark, social handles and the .com, and live with each as a logo, a compact and an Instagram grid before you commit.</li>
+    </ul>
+  </div>
+
+  <footer>
+    <span>Naming &amp; Brand Strategy — A Beauty Brand</span>
+    <span class="sig">Verbal Identity · Omar</span>
+  </footer>
+
+</div>
+</body>
+</html>
