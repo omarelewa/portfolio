@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>An Italian Deli — Naming &amp; Brand Strategy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Albert+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F1E6CD;
+    --paper-2:#F8F0DC;
+    --card:#FAF3E1;
+    --ink:#24291D;
+    --ink-soft:#5E5A47;
+    --ink-faint:#9B917A;
+    --red:#B23A2A;
+    --red-deep:#8C2B1E;
+    --green:#5E6B38;
+    --green-deep:#46522A;
+    --line:rgba(36,41,29,0.15);
+    --line-soft:rgba(36,41,29,0.07);
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Albert Sans", system-ui, sans-serif;
+    font-size:17px; line-height:1.65; font-weight:400;
+    background-image:
+      radial-gradient(1100px 540px at 86% -10%, rgba(178,58,42,0.13), transparent 60%),
+      radial-gradient(900px 520px at 4% 4%, rgba(94,107,56,0.12), transparent 60%);
+    background-attachment:fixed;
+  }
+  body::before{
+    content:""; position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.5;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  }
+  .wrap{ position:relative; z-index:1; max-width:850px; margin:0 auto; padding:80px 46px 104px; }
+
+  .eyebrow{
+    font-family:"Albert Sans", sans-serif; font-size:11.5px; font-weight:700;
+    letter-spacing:.28em; text-transform:uppercase; color:var(--red-deep);
+    display:inline-flex; align-items:center; gap:12px;
+  }
+  .eyebrow .bar{ width:28px; height:2px; background:var(--red); display:inline-block; border-radius:2px; }
+
+  /* hero */
+  header{ padding-bottom:18px; }
+  .brandline{
+    font-family:"Albert Sans", sans-serif; font-weight:600; font-size:11.5px;
+    letter-spacing:.26em; text-transform:uppercase; color:var(--ink-soft);
+    display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;
+    padding-bottom:34px; border-bottom:1px solid var(--line);
+  }
+  .brandline .right{ color:var(--ink-faint); }
+  .title{
+    font-family:"Yeseva One", serif; font-weight:400;
+    font-size:clamp(50px,9vw,92px); line-height:1.0; letter-spacing:0;
+    margin:52px 0 4px; color:var(--ink);
+  }
+  .title .small{ display:block; font-family:"Albert Sans",sans-serif; font-style:italic; font-weight:500; font-size:.2em; color:var(--red-deep); margin-top:.7em; letter-spacing:.01em; }
+  .deco-rule{ display:flex; align-items:center; gap:8px; margin:20px 0 26px; }
+  .deco-rule .l{ height:2px; width:60px; background:var(--red); border-radius:2px; }
+  .deco-rule .d{ width:7px; height:7px; background:var(--green); border-radius:50%; }
+  .deco-rule .l2{ height:1px; flex:1; max-width:120px; background:var(--line); }
+  .sub{
+    font-family:"Albert Sans", sans-serif; font-weight:600; font-size:13px;
+    letter-spacing:.2em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 28px;
+    display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+  }
+  .sub .pip{ width:5px; height:5px; border-radius:50%; background:var(--red); }
+  .thesis{
+    font-family:"Yeseva One", serif;
+    font-size:clamp(26px,4.2vw,40px); line-height:1.2; color:var(--ink); max-width:20ch; margin:0;
+  }
+  .thesis .hl{ color:var(--red-deep); }
+
+  section{ padding:48px 0; border-bottom:1px solid var(--line-soft); }
+  p{ margin:0 0 1.05em; } p:last-child{ margin-bottom:0; }
+  strong{ color:var(--ink); font-weight:700; }
+  em{ font-style:italic; }
+
+  .sblock{ margin-bottom:28px; }
+  .sblock .lab{ font-family:"Albert Sans",sans-serif; font-size:11px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:var(--red-deep); margin-bottom:8px; }
+  .sblock p{ font-size:16.5px; color:var(--ink-soft); max-width:56ch; }
+  .sblock p strong{ color:var(--ink); }
+  .sblock p em{ font-family:"Yeseva One",serif; font-style:normal; color:var(--green-deep); }
+
+  .fork{
+    font-family:"Yeseva One",serif; font-size:clamp(21px,3.4vw,28px);
+    line-height:1.34; color:var(--ink); max-width:30ch; margin:6px 0 4px; padding-left:24px; position:relative;
+  }
+  .fork::before{ content:""; position:absolute; left:0; top:6px; bottom:6px; width:3px; background:var(--red); border-radius:3px; }
+  .fork b{ color:var(--red-deep); }
+
+  /* positioning block */
+  .pos{ background:var(--card); border:1px solid var(--line); border-top:4px solid var(--green); border-radius:12px; padding:30px 32px; margin-top:8px; }
+  .pos .ptag{ font-family:"Albert Sans",sans-serif; font-size:11px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; }
+  .pos h3{ font-family:"Yeseva One",serif; font-weight:400; font-size:clamp(26px,4vw,34px); line-height:1.06; margin:0 0 16px; color:var(--green-deep); }
+  .pos dl{ margin:0; display:grid; grid-template-columns:1fr 1fr; gap:14px 30px; }
+  .pos dt{ font-family:"Albert Sans",sans-serif; font-size:10.5px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:3px; }
+  .pos dd{ margin:0; font-size:15.5px; line-height:1.45; color:var(--ink-soft); }
+  .pos dd strong{ color:var(--ink); }
+
+  /* three territory chips */
+  .terrs{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin-top:24px; }
+  .tc{ background:var(--paper-2); border:1px solid var(--line); border-radius:10px; padding:20px 20px 22px; }
+  .tc .tn{ font-family:"Albert Sans",sans-serif; font-size:10.5px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); }
+  .tc h4{ font-family:"Yeseva One",serif; font-weight:400; font-size:20px; line-height:1.08; margin:5px 0 8px; color:var(--ink); }
+  .tc .names{ font-family:"Albert Sans",sans-serif; font-weight:700; font-size:12px; letter-spacing:.02em; color:var(--red-deep); margin:0 0 10px; line-height:1.4; }
+  .tc p{ font-size:14px; line-height:1.45; color:var(--ink-soft); margin:0; }
+
+  /* names */
+  .terr-head{ margin:8px 0 22px; }
+  .terr-tag{
+    font-family:"Albert Sans",sans-serif; font-size:11px; font-weight:700; letter-spacing:.24em; text-transform:uppercase;
+    color:var(--red-deep); display:flex; align-items:center; gap:12px; margin-bottom:12px;
+  }
+  .terr-tag .ix{ font-family:"Yeseva One",serif; color:var(--green-deep); font-size:15px; letter-spacing:0; text-transform:none; }
+  .terr-tag .ln{ flex:1; height:1px; background:var(--line); }
+  .terr-title{ font-family:"Yeseva One",serif; font-weight:400; font-size:clamp(25px,4vw,34px); margin:0; color:var(--ink); }
+  .terr-sub{ font-family:"Albert Sans",sans-serif; font-style:italic; font-size:16px; color:var(--ink-soft); margin:6px 0 0; }
+
+  .name{ display:grid; grid-template-columns:52px 1fr; gap:6px 24px; padding:30px 0; border-top:1px solid var(--line-soft); }
+  .name .no{ font-family:"Yeseva One",serif; font-size:22px; color:var(--red); padding-top:8px; line-height:1; }
+  .nm-title{ font-family:"Yeseva One",serif; font-weight:400; font-size:clamp(30px,5vw,46px); line-height:1.02; margin:0 0 5px; color:var(--ink); }
+  .nm-title .amp{ color:var(--red); }
+  .nm-ess{ font-family:"Yeseva One",serif; font-size:17px; color:var(--red-deep); margin:0 0 12px; }
+  .nm-body{ font-size:16.5px; line-height:1.58; color:var(--ink-soft); max-width:55ch; margin:0; }
+  .nm-body strong{ color:var(--ink); }
+  .nm-body em{ font-family:"Yeseva One",serif; font-style:normal; color:var(--green-deep); }
+  .verbal{ margin:14px 0 0; padding:0; list-style:none; }
+  .verbal .vl{ font-family:"Albert Sans",sans-serif; font-size:11px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:7px; }
+  .verbal li.line{ font-family:"Albert Sans",sans-serif; font-style:italic; font-size:16px; color:var(--ink); line-height:1.5; padding-left:16px; position:relative; }
+  .verbal li.line::before{ content:""; position:absolute; left:0; top:.7em; width:6px; height:2px; background:var(--green); }
+  .nm-hook{
+    display:inline-block; margin-top:14px; font-family:"Albert Sans",sans-serif; font-size:11.5px; font-weight:700;
+    letter-spacing:.1em; text-transform:uppercase; color:var(--ink);
+    border:1px solid var(--line); border-radius:999px; padding:5px 14px; background:var(--paper-2);
+  }
+  .nm-hook b{ color:var(--red-deep); font-weight:700; }
+
+  /* recommendation */
+  .rec{ padding:56px 0 6px; }
+  .rec .big{ font-family:"Yeseva One",serif; font-size:clamp(25px,4.2vw,36px); line-height:1.24; color:var(--ink); max-width:24ch; }
+  .rec .big b{ color:var(--red-deep); }
+  .rec ul{ margin:24px 0 0; padding:0; list-style:none; }
+  .rec li{ position:relative; padding-left:22px; margin-bottom:13px; font-size:16.5px; color:var(--ink-soft); max-width:58ch; }
+  .rec li::before{ content:""; position:absolute; left:1px; top:.55em; width:9px; height:9px; border-radius:50%; background:var(--red); }
+  .rec li strong{ color:var(--ink); }
+
+  footer{
+    margin-top:46px; padding-top:24px; border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:12px;
+    font-family:"Albert Sans",sans-serif; font-size:11.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-faint);
+  }
+  footer .sig{ color:var(--ink-soft); font-weight:700; }
+
+  .reveal{ opacity:0; transform:translateY(15px); animation:rise .72s cubic-bezier(.2,.7,.2,1) forwards; }
+  @keyframes rise{ to{ opacity:1; transform:none; } }
+  .d1{animation-delay:.04s}.d2{animation-delay:.12s}.d3{animation-delay:.2s}.d4{animation-delay:.28s}.d5{animation-delay:.36s}
+  @media (prefers-reduced-motion:reduce){ .reveal{ animation:none; opacity:1; transform:none; } }
+
+  @media (max-width:680px){
+    .wrap{ padding:50px 22px 70px; }
+    .pos dl, .terrs{ grid-template-columns:1fr; }
+    .name{ grid-template-columns:1fr; gap:4px; }
+    .name .no{ padding-top:0; }
+    body{ font-size:16px; }
+  }
+  @media print{
+    @page{ margin:13mm; }
+    body{ background:#fff; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body::before{ display:none; }
+    .reveal{ animation:none; opacity:1; transform:none; }
+    .pos,.terrs,.tc,.name,section{ break-inside:avoid; }
+  }
+</style>
+</head>
+<body>
+<!-- portfolio-nav (added) -->
+<a href="../index.html" class="oe-backhome" aria-label="Back to Omar Elewa — portfolio home">
+  <span class="oe-ar">&larr;</span><span class="oe-tx">Omar Elewa</span>
+</a>
+<style>
+  .oe-backhome{position:fixed;left:18px;bottom:18px;z-index:99999;display:inline-flex;align-items:center;gap:8px;
+    font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+    color:#fff;text-decoration:none;background:rgba(20,18,14,.62);border:1px solid rgba(255,255,255,.16);
+    padding:9px 15px 9px 13px;border-radius:999px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    box-shadow:0 8px 24px rgba(0,0,0,.28);transition:background .25s ease,transform .25s ease;}
+  .oe-backhome:hover{background:rgba(20,18,14,.88);transform:translateY(-2px);}
+  .oe-backhome .oe-ar{display:inline-block;transition:transform .25s ease;}
+  .oe-backhome:hover .oe-ar{transform:translateX(-3px);}
+  @media print{.oe-backhome{display:none !important;}}
+  @media (max-width:520px){.oe-backhome{left:12px;bottom:12px;font-size:11px;padding:8px 13px;}}
+</style>
+<!-- /portfolio-nav -->
+
+<div class="wrap">
+
+  <header>
+    <div class="brandline reveal d1">
+      <span>Naming &amp; Brand Strategy</span>
+      <span class="right">Verbal Identity &amp; Positioning</span>
+    </div>
+    <h1 class="title reveal d2">An Italian Deli<span class="small">naming &amp; the strategy beneath it</span></h1>
+    <div class="deco-rule reveal d2"><span class="l"></span><span class="d"></span><span class="l2"></span></div>
+    <p class="sub reveal d3">Nine Names <span class="pip"></span> Three Personalities <span class="pip"></span> One Promise</p>
+    <p class="thesis reveal d3">The positioning's already decided. <span class="hl">Now choose the voice.</span></p>
+  </header>
+
+  <!-- STRATEGY -->
+  <section>
+    <div class="eyebrow reveal d2"><span class="bar"></span> The Mini Brand Strategy</div>
+
+    <div class="sblock reveal d3" style="margin-top:22px;">
+      <div class="lab">The Opportunity</div>
+      <p>Lunch is broken in two directions. Fast food is quick but soulless; proper delis are wonderful but slow. The winnable space sits dead between them: <strong>artisan Italian deli quality, served at the speed of a city lunch break.</strong> A brand that refuses the trade-off — craft <em>and</em> speed — owns a gap most of the high street has left wide open.</p>
+    </div>
+
+    <div class="sblock reveal d3">
+      <div class="lab">The Strategic Read</div>
+      <p class="fork">Read the taglines and one promise repeats under every option — <b>"seconds, not minutes," "warp speed," "no extra wait"</b> — always paired with <b>"artisan," "heritage," "house-cured."</b> The positioning is already decided, and it's a good one. So the real choice isn't what the brand stands for. It's the voice it says it in.</p>
+    </div>
+
+    <div class="pos reveal d4">
+      <div class="ptag">The Positioning</div>
+      <h3>Slow-made. Fast-served.</h3>
+      <dl>
+        <dt>Proposition</dt><dd>Proper Italian deli food — artisan bread, real ingredients, genuine craft — ready before your lunch break is over.</dd>
+        <dt>The gap it owns</dt><dd>Between soulless fast food and slow artisan delis: <strong>quality and speed, no compromise.</strong></dd>
+        <dt>Personality</dt><dd>Warm, confident, appetising. Proud of the craft, never precious about it.</dd>
+        <dt>Audience</dt><dd>The city lunch crowd — thirty minutes, good taste, done settling for sad meal-deal sandwiches.</dd>
+      </dl>
+    </div>
+
+    <div class="sblock reveal d5" style="margin:30px 0 0;">
+      <div class="lab">The Real Decision — Three Personalities</div>
+      <p style="margin-bottom:6px;">The names fall into three voices. Same promise, three ways of saying it:</p>
+      <div class="terrs">
+        <div class="tc">
+          <div class="tn">Territory I</div>
+          <h4>The Idiom Twist</h4>
+          <p class="names">Well Bread · Bread &amp; Better · Born &amp; Bread · Holy Grain</p>
+          <p>Witty, warm, pun-rich. Built for a chalkboard and a shareable shopfront — the most personality-forward route.</p>
+        </div>
+        <div class="tc">
+          <div class="tn">Territory II</div>
+          <h4>The Hero Ingredient</h4>
+          <p class="names">Tom82 · Lettuce</p>
+          <p>Fresh, modern, product-first. Says "it's about what's inside" — clean and design-led, with a wink.</p>
+        </div>
+        <div class="tc">
+          <div class="tn">Territory III</div>
+          <h4>The Attitude</h4>
+          <p class="names">Delite · Hammock · Mess</p>
+          <p>Vibe-led. Sells the feeling of lunch — delight, chill, glorious abundance. The most lifestyle-y.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TERRITORY I -->
+  <div class="territory">
+    <div class="terr-head reveal d2">
+      <div class="terr-tag"><span class="ix">Territory I</span><span class="ln"></span></div>
+      <h2 class="terr-title">The Idiom Twist</h2>
+      <p class="terr-sub">Everyday English sayings, reborn with bread.</p>
+    </div>
+
+    <div class="name reveal d3">
+      <div class="no">01</div>
+      <div>
+        <h3 class="nm-title">WELL BREAD</h3>
+        <p class="nm-ess">Bread with impeccable manners.</p>
+        <p class="nm-body">A near-perfect one-word pun: <em>well-bred</em> — refined, raised right, impeccable manners — collapsed into <em>bread.</em> It promises craft and pedigree with a wink, casting the loaf as something with breeding and class. Warm, witty and quintessentially deli — it makes quality feel charming rather than precious.</p>
+        <ul class="verbal">
+          <li class="vl">The verbal range</li>
+          <li class="line">Bread with impeccable manners.</li>
+          <li class="line">Flour raised right, crusts with character.</li>
+          <li class="line">Refined grains, rebellious fillings.</li>
+          <li class="line">Properly crafted, promptly served.</li>
+        </ul>
+        <span class="nm-hook">The hook · <b>well-bred → well bread</b></span>
+      </div>
+    </div>
+
+    <div class="name reveal d3">
+      <div class="no">02</div>
+      <div>
+        <h3 class="nm-title">BREAD <span class="amp">&amp;</span> BETTER</h3>
+        <p class="nm-ess">Staples, rebooted.</p>
+        <p class="nm-body">It hijacks "bread and butter" — the very idiom for life's reliable staples — and swaps in <em>better.</em> The name promises the everyday sandwich, upgraded: the familiar made excellent. Instantly understood, easy to love, and strategically smart — it owns the idea of the dependable lunch, levelled up.</p>
+        <ul class="verbal">
+          <li class="vl">The verbal range</li>
+          <li class="line">Staples, rebooted.</li>
+          <li class="line">Two slices, instantly upgraded.</li>
+          <li class="line">Classic grains perfected, fillings in overdrive.</li>
+          <li class="line">The everyday, levelled up.</li>
+        </ul>
+        <span class="nm-hook">The hook · <b>bread &amp; butter, levelled up</b></span>
+      </div>
+    </div>
+
+    <div class="name reveal d4">
+      <div class="no">03</div>
+      <div>
+        <h3 class="nm-title">BORN <span class="amp">&amp;</span> BREAD</h3>
+        <p class="nm-ess">Raised on grain and gratitude.</p>
+        <p class="nm-body">"Born and bred" — the phrase for deep roots and authenticity — reborn as <em>born &amp; bread.</em> It wraps the brand in heritage and belonging, suggesting a place that's been doing this forever and means it. Heartfelt and homely, with the pun quietly doing the work of "authentic" in two words.</p>
+        <ul class="verbal">
+          <li class="vl">The verbal range</li>
+          <li class="line">Raised on grain and gratitude.</li>
+          <li class="line">Heritage loaves meet high-speed assembly.</li>
+          <li class="line">Kneaded slow, stacked fast, handed over hot.</li>
+          <li class="line">Taste tradition — before you can say lunchtime.</li>
+        </ul>
+        <span class="nm-hook">The hook · <b>born &amp; bred → born &amp; bread</b></span>
+      </div>
+    </div>
+
+    <div class="name reveal d4">
+      <div class="no">04</div>
+      <div>
+        <h3 class="nm-title">HOLY GRAIN</h3>
+        <p class="nm-ess">Divine crumb, saintly crust.</p>
+        <p class="nm-body">The boldest pun in the set: the <em>Holy Grail</em> — the ultimate object of a quest — becomes <em>Holy Grain.</em> It frames the sandwich as something worth seeking, almost worshipped, with cheeky reverence. Memorable, a little theatrical, and ripe for playful branding — pilgrims, miracles, divine bread — for a deli confident enough to canonise its own loaf.</p>
+        <ul class="verbal">
+          <li class="vl">The verbal range</li>
+          <li class="line">Divine crumb, saintly crust.</li>
+          <li class="line">The loaf is the pilgrimage; the wait, a miracle.</li>
+          <li class="line">Whole grains blessed with bold fillings.</li>
+          <li class="line">A quick taste of heaven, then back on your way.</li>
+        </ul>
+        <span class="nm-hook">The hook · <b>the Holy Grail of grain</b></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERRITORY II -->
+  <div class="territory">
+    <div class="terr-head reveal d2">
+      <div class="terr-tag"><span class="ix">Territory II</span><span class="ln"></span></div>
+      <h2 class="terr-title">The Hero Ingredient</h2>
+      <p class="terr-sub">Named for what's inside — fresh, and product-first.</p>
+    </div>
+
+    <div class="name reveal d3">
+      <div class="no">05</div>
+      <div>
+        <h3 class="nm-title">TOM82</h3>
+        <p class="nm-ess">Taste the garden before you taste the city.</p>
+        <p class="nm-body">Tomato — the bright, ripe heart of Italian flavour — distilled to the friendly <strong>Tom</strong> and made ownable with <strong>82.</strong> The number turns a generic word into a specific, designed, trademarkable mark — read it as an <em>est.</em> year, a street address, a signature batch. Fresh and characterful, it leads with the ingredient that says "Italian, sun-ripened, real," with a confident modern twist.</p>
+        <ul class="verbal">
+          <li class="vl">The verbal range</li>
+          <li class="line">Vine-ripened brightness at the heart of every stack.</li>
+          <li class="line">Plump scarlet slices, dripping with summer.</li>
+          <li class="line">Sweet acid pops, sunshine through bread and melt.</li>
+          <li class="line">Taste the garden before you taste the city.</li>
+        </ul>
+        <span class="nm-hook">The hook · <b>"Tom," with a number that makes it ownable</b></span>
+      </div>
+    </div>
+
+    <div class="name reveal d3">
+      <div class="no">06</div>
+      <div>
+        <h3 class="nm-title">LETTUCE</h3>
+        <p class="nm-ess">Let us feed your lunch.</p>
+        <p class="nm-body">A double-edged delight: <em>lettuce,</em> the crisp green that signals fresh, and <em>"let us"</em> — let us make your lunch — hiding in plain sight. Playful, friendly and instantly memorable, it promises freshness while sounding like an open invitation. The kind of name people repeat because they enjoy getting the joke.</p>
+        <ul class="verbal">
+          <li class="vl">The verbal range</li>
+          <li class="line">Crisp, cool greens anchor every build.</li>
+          <li class="line">Seconds, not minutes, from order to first bite.</li>
+          <li class="line">From garden crunch to city rush, freshness keeps pace.</li>
+          <li class="line">Grab, bite, go — lunchtime stays in the green.</li>
+        </ul>
+        <span class="nm-hook">The hook · <b>lettuce = "let us"</b></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERRITORY III -->
+  <div class="territory">
+    <div class="terr-head reveal d2">
+      <div class="terr-tag"><span class="ix">Territory III</span><span class="ln"></span></div>
+      <h2 class="terr-title">The Attitude</h2>
+      <p class="terr-sub">Named for the feeling — the vibe of the lunch, not the loaf.</p>
+    </div>
+
+    <div class="name reveal d3">
+      <div class="no">07</div>
+      <div>
+        <h3 class="nm-title">DELITE</h3>
+        <p class="nm-ess">A small daily delight.</p>
+        <p class="nm-body">A triple-play in six letters: <strong>deli</strong>, <strong>lite</strong> (fast, light, no extra wait) and <strong>delight.</strong> The name promises deli craft stripped to its essence — quick service, bright flavour, everyday joy. Clever and ownable, with the deliberate spelling whispering "fast" before you've even ordered.</p>
+        <ul class="verbal">
+          <li class="vl">The verbal range</li>
+          <li class="line">Deli craft, stripped to its essence.</li>
+          <li class="line">"Lite" in spelling, lightning in service.</li>
+          <li class="line">A wink that turns every sandwich into a delight.</li>
+          <li class="line">Fresh bread, bright fillings, gone in a bite.</li>
+        </ul>
+        <span class="nm-hook">The hook · <b>deli · lite · delight</b></span>
+      </div>
+    </div>
+
+    <div class="name reveal d3">
+      <div class="no">08</div>
+      <div>
+        <h3 class="nm-title">HAMMOCK</h3>
+        <p class="nm-ess">Hang loose, eat tight.</p>
+        <p class="nm-body">Unexpected and instantly distinctive. <strong>Ham</strong>mock hides the deli meat, evokes a chilled-out, swing-by-and-glide-out vibe, and paints the food perfectly: an open loaf <em>cradling</em> its fillings like a hammock. Relaxed, warm and ownable in a category full of literal names — it sells the feeling of lunch, not just the product.</p>
+        <ul class="verbal">
+          <li class="vl">The verbal range</li>
+          <li class="line">Bread slung open, cradle-soft, holding the good stuff.</li>
+          <li class="line">Sun-bright veg and house-cured meats in perfect balance.</li>
+          <li class="line">Order, swing by, glide out — fast service, chill vibes.</li>
+          <li class="line">Hang loose, eat tight.</li>
+        </ul>
+        <span class="nm-hook">The hook · <b>ham + the bread that cradles it</b></span>
+      </div>
+    </div>
+
+    <div class="name reveal d4">
+      <div class="no">09</div>
+      <div>
+        <h3 class="nm-title">MESS</h3>
+        <p class="nm-ess">Controlled chaos, wrapped in artisan bread.</p>
+        <p class="nm-body">Bold and disarmingly honest: a great sandwich <em>is</em> a glorious mess, and a <em>mess hall</em> is where good food gets served fast to hungry people. The name owns the deliciously chaotic, overstuffed, eat-it-over-the-wrapper truth — confident, energetic, refreshingly unprecious. <strong>A note for the brief:</strong> as a common word it'll need a hard trademark check, but as an attitude it's pure swagger.</p>
+        <ul class="verbal">
+          <li class="vl">The verbal range</li>
+          <li class="line">Controlled chaos, wrapped in artisan bread.</li>
+          <li class="line">Mess-hall speed — order, devour, deploy.</li>
+          <li class="line">Eat fast, smile wide.</li>
+        </ul>
+        <span class="nm-hook">The hook · <b>the glorious mess, owned</b></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RECOMMENDATION -->
+  <div class="rec reveal d2">
+    <div class="eyebrow" style="margin-bottom:18px;"><span class="bar"></span> Where to From Here</div>
+    <p class="big">The positioning's settled — so choose the <b>personality</b>, and the name follows.</p>
+    <ul>
+      <li>The idiom twists carry the most character — but a warning comes with them: <strong>don't pick a punny family that competes with itself,</strong> and choose the one whose joke <em>deepens</em> rather than wears thin. <strong>Well Bread</strong> and <strong>Bread &amp; Better</strong> age best — warm, classy, endlessly extendable. <strong>Holy Grain</strong> is the boldest (huge personality — but commit fully or not at all).</li>
+      <li><strong>Tom82</strong> and <strong>Delite</strong> are the most distinctive <em>as marks</em> — an alphanumeric and a coined word are the easiest to trademark and own outright.</li>
+      <li>Pressure-test the common words hardest — <strong>Mess, Lettuce, Hammock</strong> are brilliant but generic on paper, so trademark and .com clearance will likely be the deciding factor.</li>
+      <li>If you fall for <strong>Tom82</strong>, anchor the "82" to a real story — a year, an address, a recipe number — so the number earns its place rather than puzzling people.</li>
+      <li>Then shortlist two or three, clear trademark + social handles + the .com, and see each on a shopfront, a sandwich wrapper and an Instagram grid before you commit.</li>
+    </ul>
+  </div>
+
+  <footer>
+    <span>Naming &amp; Brand Strategy — An Italian Deli</span>
+    <span class="sig">Verbal Identity · Omar</span>
+  </footer>
+
+</div>
+</body>
+</html>

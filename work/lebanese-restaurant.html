@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Lebanese Restaurant — Naming Presentation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Mulish:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#1F1813;
+    --bg-2:#271E17;
+    --panel:#2C2218;
+    --text:#F2E7D5;
+    --text-soft:#C3B39B;
+    --text-faint:#897B68;
+    --terra:#CE7142;
+    --terra-deep:#B2562C;
+    --olive:#A6AC64;
+    --olive-deep:#878C4C;
+    --gold:#D3A34B;
+    --line:rgba(242,231,213,0.15);
+    --line-soft:rgba(242,231,213,0.07);
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:"Mulish", system-ui, sans-serif;
+    font-size:17px; line-height:1.66; font-weight:400;
+    background-image:
+      radial-gradient(1100px 560px at 86% -10%, rgba(206,113,66,0.16), transparent 60%),
+      radial-gradient(900px 520px at 4% 4%, rgba(166,172,100,0.10), transparent 60%);
+    background-attachment:fixed;
+  }
+  body::before{
+    content:""; position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.5;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  }
+  .wrap{ position:relative; z-index:1; max-width:840px; margin:0 auto; padding:80px 46px 104px; }
+
+  .eyebrow{
+    font-family:"Mulish", sans-serif; font-size:11.5px; font-weight:700;
+    letter-spacing:.3em; text-transform:uppercase; color:var(--olive);
+    display:inline-flex; align-items:center; gap:12px;
+  }
+  .eyebrow .bar{ width:28px; height:1px; background:var(--olive-deep); display:inline-block; }
+  .ar{ font-family:"Amiri", serif; direction:rtl; }
+
+  /* hero */
+  header{ padding-bottom:18px; }
+  .brandline{
+    font-family:"Mulish", sans-serif; font-weight:600; font-size:11.5px;
+    letter-spacing:.28em; text-transform:uppercase; color:var(--text-soft);
+    display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;
+    padding-bottom:34px; border-bottom:1px solid var(--line);
+  }
+  .brandline .right{ color:var(--text-faint); }
+  .title{
+    font-family:"DM Serif Display", serif; font-weight:400;
+    font-size:clamp(50px,9.5vw,96px); line-height:.98; letter-spacing:-0.005em;
+    margin:52px 0 14px; color:var(--text);
+  }
+  .title .small{ display:block; font-style:italic; font-size:.46em; color:var(--terra); margin-top:.2em; letter-spacing:0; }
+  .sub{
+    font-family:"Mulish", sans-serif; font-weight:600; font-size:13px;
+    letter-spacing:.22em; text-transform:uppercase; color:var(--text-soft); margin:0 0 30px;
+    display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+  }
+  .sub .ar{ font-family:"Amiri", serif; text-transform:none; letter-spacing:0; font-size:21px; color:var(--text); }
+  .sub .pip{ width:5px; height:5px; border-radius:50%; background:var(--terra); }
+  .thesis{
+    font-family:"DM Serif Display", serif; font-style:italic;
+    font-size:clamp(25px,4.2vw,38px); line-height:1.2; color:var(--text); max-width:21ch; margin:0;
+  }
+  .thesis .hl{ font-style:normal; color:var(--terra); }
+
+  section{ padding:48px 0; border-bottom:1px solid var(--line-soft); }
+  .lead{ font-size:19.5px; line-height:1.6; color:var(--text); max-width:44ch; }
+  .lead em{ font-family:"DM Serif Display",serif; font-style:italic; color:var(--gold); font-size:1.04em; }
+  p{ margin:0 0 1.05em; } p:last-child{ margin-bottom:0; }
+  strong{ color:#FFF6E9; font-weight:700; }
+
+  /* territory */
+  .territory{ padding:54px 0 8px; border-bottom:1px solid var(--line-soft); }
+  .terr-head{ margin-bottom:30px; }
+  .terr-tag{
+    font-family:"Mulish",sans-serif; font-size:11px; font-weight:700; letter-spacing:.26em; text-transform:uppercase;
+    color:var(--olive); display:flex; align-items:center; gap:12px; margin-bottom:14px;
+  }
+  .terr-tag .ix{ font-family:"DM Serif Display",serif; font-style:italic; color:var(--terra); font-size:15px; letter-spacing:0; text-transform:none; }
+  .terr-tag .ln{ flex:1; height:1px; background:var(--line); }
+  .terr-title{ font-family:"DM Serif Display",serif; font-weight:400; font-size:clamp(28px,4.6vw,40px); line-height:1.04; margin:0 0 8px; color:var(--text); }
+  .terr-desc{ font-family:"DM Serif Display",serif; font-style:italic; font-size:18.5px; color:var(--text-soft); max-width:50ch; margin:0; }
+
+  /* name */
+  .name{ display:grid; grid-template-columns:60px 1fr; gap:4px 26px; padding:30px 0; border-top:1px solid var(--line-soft); }
+  .name:first-of-type{ border-top:0; }
+  .name .no{ font-family:"DM Serif Display",serif; font-size:24px; color:var(--terra); padding-top:6px; line-height:1; }
+  .nm-head{ display:flex; align-items:baseline; gap:16px; flex-wrap:wrap; margin-bottom:5px; }
+  .nm-title{ font-family:"DM Serif Display",serif; font-weight:400; font-size:clamp(30px,5vw,44px); line-height:1.02; margin:0; color:var(--text); }
+  .nm-ar{ font-family:"Amiri", serif; direction:rtl; font-size:clamp(24px,4vw,32px); color:var(--olive); line-height:1; }
+  .nm-ess{ font-family:"DM Serif Display",serif; font-style:italic; font-size:18.5px; color:var(--gold); margin:0 0 12px; }
+  .nm-body{ font-size:16.5px; line-height:1.6; color:var(--text-soft); max-width:55ch; margin:0; }
+  .nm-body strong{ color:#FFF6E9; }
+  .nm-hook{
+    display:inline-block; margin-top:14px; font-family:"Mulish",sans-serif; font-size:11.5px; font-weight:700;
+    letter-spacing:.12em; text-transform:uppercase; color:var(--text);
+    border:1px solid var(--line); border-radius:999px; padding:5px 14px; background:var(--bg-2);
+  }
+  .nm-hook b{ color:var(--terra); font-weight:700; }
+
+  /* closing */
+  .closing{ padding:58px 0 6px; }
+  .closing .big{
+    font-family:"DM Serif Display",serif; font-style:italic;
+    font-size:clamp(25px,4.4vw,38px); line-height:1.24; color:var(--text); max-width:24ch;
+  }
+  .closing .big b{ font-style:normal; color:var(--terra); }
+  .next{ margin-top:26px; font-size:16.5px; color:var(--text-soft); max-width:52ch; }
+  .next strong{ color:#FFF6E9; }
+
+  footer{
+    margin-top:46px; padding-top:24px; border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:12px;
+    font-family:"Mulish",sans-serif; font-size:11.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--text-faint);
+  }
+  footer .ar{ font-family:"Amiri",serif; letter-spacing:0; font-size:15px; }
+  footer .sig{ color:var(--text-soft); font-weight:700; }
+
+  .reveal{ opacity:0; transform:translateY(15px); animation:rise .72s cubic-bezier(.2,.7,.2,1) forwards; }
+  @keyframes rise{ to{ opacity:1; transform:none; } }
+  .d1{animation-delay:.04s}.d2{animation-delay:.12s}.d3{animation-delay:.2s}.d4{animation-delay:.28s}.d5{animation-delay:.36s}
+  @media (prefers-reduced-motion:reduce){ .reveal{ animation:none; opacity:1; transform:none; } }
+
+  @media (max-width:680px){
+    .wrap{ padding:50px 22px 70px; }
+    .name{ grid-template-columns:1fr; gap:3px; }
+    .name .no{ padding-top:0; }
+    body{ font-size:16px; }
+  }
+  @media print{
+    @page{ margin:13mm; }
+    body{ background:#1A140F; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body::before{ display:none; }
+    .reveal{ animation:none; opacity:1; transform:none; }
+    .territory,.name,section{ break-inside:avoid; }
+  }
+</style>
+</head>
+<body>
+<!-- portfolio-nav (added) -->
+<a href="../index.html" class="oe-backhome" aria-label="Back to Omar Elewa — portfolio home">
+  <span class="oe-ar">&larr;</span><span class="oe-tx">Omar Elewa</span>
+</a>
+<style>
+  .oe-backhome{position:fixed;left:18px;bottom:18px;z-index:99999;display:inline-flex;align-items:center;gap:8px;
+    font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+    color:#fff;text-decoration:none;background:rgba(20,18,14,.62);border:1px solid rgba(255,255,255,.16);
+    padding:9px 15px 9px 13px;border-radius:999px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    box-shadow:0 8px 24px rgba(0,0,0,.28);transition:background .25s ease,transform .25s ease;}
+  .oe-backhome:hover{background:rgba(20,18,14,.88);transform:translateY(-2px);}
+  .oe-backhome .oe-ar{display:inline-block;transition:transform .25s ease;}
+  .oe-backhome:hover .oe-ar{transform:translateX(-3px);}
+  @media print{.oe-backhome{display:none !important;}}
+  @media (max-width:520px){.oe-backhome{left:12px;bottom:12px;font-size:11px;padding:8px 13px;}}
+</style>
+<!-- /portfolio-nav -->
+
+<div class="wrap">
+
+  <header>
+    <div class="brandline reveal d1">
+      <span>Naming Presentation</span>
+      <span class="right">Verbal Identity &amp; Strategy</span>
+    </div>
+    <h1 class="title reveal d2">A Lebanese Restaurant<span class="small">bringing Lebanon to the table</span></h1>
+    <p class="sub reveal d3">Ten Names <span class="pip"></span> Three Territories <span class="pip"></span> <span class="ar">لبنان</span></p>
+    <p class="thesis reveal d3">Don't name the cuisine. <span class="hl">Name the memory of Lebanon.</span></p>
+  </header>
+
+  <section>
+    <div class="eyebrow reveal d2"><span class="bar"></span> The Brief</div>
+    <p class="lead reveal d3">The task: name a Lebanese restaurant — a place of warmth, generosity and deep flavour. The strategy is single-minded: don't describe "Lebanese food," evoke a <em>feeling</em> of Lebanon itself — the <em>clay oven</em> and the family pot, the <em>lemon groves</em> and mountain herbs, the <em>poetry</em> and percussion of a long Lebanese night. Ten names, sorted into three territories, each a different way to bring Lebanon to the table.</p>
+  </section>
+
+  <!-- TERRITORY 1 -->
+  <div class="territory">
+    <div class="terr-head reveal d2">
+      <div class="terr-tag"><span class="ix">Territory I</span><span class="ln"></span></div>
+      <h2 class="terr-title">Home, Hearth &amp; Table</h2>
+      <p class="terr-desc">Names rooted in the Lebanese home — the clay oven, the family pot, the house, and the table everyone gathers around.</p>
+    </div>
+
+    <div class="name reveal d3">
+      <div class="no">01</div>
+      <div>
+        <div class="nm-head"><h3 class="nm-title">Bayt El Tannour</h3><span class="nm-ar">بيت التنور</span></div>
+        <p class="nm-ess">House of the clay oven.</p>
+        <p class="nm-body">Bayt El Tannour names the beating heart of Lebanese cooking — the <strong>tannour,</strong> where bread blisters and stews cook low and slow. It promises warmth, craft and the feeling of stepping into a Lebanese home rather than a restaurant. Built for a kitchen that treats fire-and-clay tradition as its signature.</p>
+        <span class="nm-hook">The hook · <b>the clay oven</b></span>
+      </div>
+    </div>
+
+    <div class="name reveal d3">
+      <div class="no">02</div>
+      <div>
+        <div class="nm-head"><h3 class="nm-title">Tanjara</h3><span class="nm-ar">طنجرة</span></div>
+        <p class="nm-ess">The family pot.</p>
+        <p class="nm-body">Tanjara is the humble cooking pot at the centre of every Lebanese kitchen — the vessel behind the slow stews and the bubbling yakhne, the food that simply says <em>home.</em> As a name it's warm, unpretentious and quietly confident: it doesn't dress the cuisine up, it celebrates the everyday pot that makes it. Charming, memorable, refreshingly down-to-earth.</p>
+        <span class="nm-hook">The hook · <b>the everyday pot, elevated</b></span>
+      </div>
+    </div>
+
+    <div class="name reveal d4">
+      <div class="no">03</div>
+      <div>
+        <div class="nm-head"><h3 class="nm-title">Beit Karaz</h3><span class="nm-ar">بيت كرز</span></div>
+        <p class="nm-ess">House of cherries.</p>
+        <p class="nm-body">Beit Karaz pairs the warmth of home — <em>beit</em> — with the sweetness of the cherries grown in Lebanon's high-altitude orchards. It's tender, nostalgic and lovely on the tongue, evoking seasonal fruit, generous hospitality and natural beauty. Ideal for a restaurant that leads with fresh, seasonal produce and a soft, welcoming spirit.</p>
+      </div>
+    </div>
+
+    <div class="name reveal d4">
+      <div class="no">04</div>
+      <div>
+        <div class="nm-head"><h3 class="nm-title">Levantine Table</h3><span class="nm-ar">بلاد الشام</span></div>
+        <p class="nm-ess">The whole region, on one table.</p>
+        <p class="nm-body">Levantine Table widens the lens from Lebanon to the whole Levant — the shared mezze culture of a region that eats generously and lingers long. Refined, globally legible and instantly understood by an international audience, it signals authenticity while welcoming everyone to the table. The most outward-looking name in the set — for ambitions beyond a single cuisine.</p>
+        <span class="nm-hook">The hook · <b>pan-Levantine, globally legible</b></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERRITORY 2 -->
+  <div class="territory">
+    <div class="terr-head reveal d2">
+      <div class="terr-tag"><span class="ix">Territory II</span><span class="ln"></span></div>
+      <h2 class="terr-title">The Land</h2>
+      <p class="terr-desc">Names drawn from Lebanon's terroir — its citrus and orchards, its valleys and snow-capped peaks.</p>
+    </div>
+
+    <div class="name reveal d3">
+      <div class="no">05</div>
+      <div>
+        <div class="nm-head"><h3 class="nm-title">Leymoune</h3><span class="nm-ar">ليمون</span></div>
+        <p class="nm-ess">Lemon — the brightness of the table.</p>
+        <p class="nm-body">Leymoune captures the bright, citrus snap that runs through Lebanese cooking, from tabbouleh to the tang of a good marinade. Fresh, simple and sunlit, it reads modern and Mediterranean — perfect for a kitchen that leans light, zesty and contemporary. One vivid word that tastes like the food.</p>
+      </div>
+    </div>
+
+    <div class="name reveal d3">
+      <div class="no">06</div>
+      <div>
+        <div class="nm-head"><h3 class="nm-title">Jebal</h3><span class="nm-ar">جبال</span></div>
+        <p class="nm-ess">The mountains of Lebanon.</p>
+        <p class="nm-body">Jebal — "mountains" — honours the snow-capped peaks and fertile valleys that define Lebanon and feed its tables. The name carries strength, height and a deep sense of place, ideal for a restaurant that celebrates terroir and sources from the land. Simple, grounded, quietly majestic.</p>
+      </div>
+    </div>
+
+    <div class="name reveal d4">
+      <div class="no">07</div>
+      <div>
+        <div class="nm-head"><h3 class="nm-title">Jabal Rehanne</h3><span class="nm-ar">جبل ريحان</span></div>
+        <p class="nm-ess">The mountain of wild herbs.</p>
+        <p class="nm-body">Jabal Rehanne names a real Lebanese mountain — lush, green, scented with the wild basil and herbs that grow across its slopes. It roots the restaurant in a specific, forageable landscape and the village tradition of cooking with what the land gives. The natural choice for a farm-to-table kitchen built on authenticity and aroma.</p>
+        <span class="nm-hook">The hook · <b>a real mountain, wild herbs</b></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERRITORY 3 -->
+  <div class="territory">
+    <div class="terr-head reveal d2">
+      <div class="terr-tag"><span class="ix">Territory III</span><span class="ln"></span></div>
+      <h2 class="terr-title">Poetry &amp; Celebration</h2>
+      <p class="terr-desc">Names that carry Lebanon's lyrical, musical soul — its verse, its reed flute, its rhythm and festivity.</p>
+    </div>
+
+    <div class="name reveal d3">
+      <div class="no">08</div>
+      <div>
+        <div class="nm-head"><h3 class="nm-title">Jazal</h3><span class="nm-ar">جَزَل</span></div>
+        <p class="nm-ess">The eloquence of zajal.</p>
+        <p class="nm-body">Jazal is the Arabic word for poetic eloquence — the lyrical art behind <strong>zajal,</strong> Lebanon's beloved tradition of improvised folk verse. The name wraps the restaurant in artistry and storytelling, casting every dish as a line of poetry with deep cultural roots. For a place that wants food to feel like an expression of Lebanon's lyrical soul.</p>
+        <span class="nm-hook">The hook · <b>zajal, Lebanese folk poetry</b></span>
+      </div>
+    </div>
+
+    <div class="name reveal d3">
+      <div class="no">09</div>
+      <div>
+        <div class="nm-head"><h3 class="nm-title">Nay</h3><span class="nm-ar">ناي</span></div>
+        <p class="nm-ess">The reed flute's song.</p>
+        <p class="nm-body">Nay is the reed flute whose breathy, soulful sound threads through Lebanese and Levantine music — intimate, ancient and deeply moving. As a name it's elegant and atmospheric, promising a dining room with feeling: candle-soft, melodic, unhurried. Perfect for a restaurant that sells mood and memory as much as a meal.</p>
+        <span class="nm-hook">The hook · <b>the reed flute, intimate</b></span>
+      </div>
+    </div>
+
+    <div class="name reveal d4">
+      <div class="no">10</div>
+      <div>
+        <div class="nm-head"><h3 class="nm-title">Tambourine</h3></div>
+        <p class="nm-ess">Rhythm, joy, the table alive.</p>
+        <p class="nm-body">Tambourine borrows the bright percussion of Lebanese celebration — the hand-drum pulse behind every wedding and every long table that turns into dancing. The name is all joy and tempo, made for a lively, social, high-energy room where food, music and people collide. A confident, festive choice that promises a good night, not just a good meal.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="closing reveal d2">
+    <div class="eyebrow" style="margin-bottom:18px;"><span class="bar"></span> Where to From Here</div>
+    <p class="big">A shortlist is a conversation, not a verdict. The most powerful routes turn something <b>specific</b> about Lebanon — a real mountain, a clay oven, a line of folk verse — into a feeling you can taste.</p>
+    <p class="next">Because specificity is what makes a name unforgettable and impossible to copy. <strong>Recommended next step:</strong> shortlist three, check trademark and domain, see how each reads on a sign and a menu in both Latin and Arabic, and say every one out loud before deciding.</p>
+  </div>
+
+  <footer>
+    <span>Naming Presentation — A Lebanese Restaurant · <span class="ar">لبنان</span></span>
+    <span class="sig">Verbal Identity · Omar</span>
+  </footer>
+
+</div>
+</body>
+</html>
